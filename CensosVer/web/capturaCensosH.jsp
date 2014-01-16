@@ -136,13 +136,13 @@
                         <tr>
                             <td colspan="12">
                                 <div class="panel panel-primary">
-                                Bienvenido: <%=rset.getString("campo_1")%>
+                                    Bienvenido: <%=rset.getString("campo_1")%>
                                     <!-- Default panel contents -->
                                     <div class="panel-heading"><strong>LLENE LOS CAMPOS CON LAS RESPUESTAS OBTENIDAS</strong></div>
                                 </div>
                             </td>
                             <td  class="style43 style51">&nbsp;</td>
-                          <td colspan="3"  class="style58">
+                            <td colspan="3"  class="style58">
                             </td>
                         </tr>
                         <tr>
@@ -189,7 +189,7 @@
                                 int contCam = 0;
                                 //nombreC=nomCam+(contCam+=1);
                                 //out.print(nombreC);
-%>
+                            %>
                             <tr>
                                 <td width="29" class="style58"><div align="center">A.1</div></td>
                                 <td width="189" class="style58">Elaborado por </td>
@@ -203,7 +203,7 @@
                                 <td bgcolor="#FFFFFF" class="style58">A.2</td>
                                 <%
                                     //int contCam=79;
-%>
+                                %>
                                 <td class="style58"><div align="left">Nombre del Encuestado</div></td>
                                 <td>             
                                     <label>
@@ -286,7 +286,7 @@
                             <tr>
                                 <td class="style58"><div align="center">A.11</div></td>
                                 <td class="style58">&nbsp;Estado </td>
-                                <td class="style33"><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" readonly ><%=rset.getString(nombreC)%></textarea>
+                                <td class="style33"><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);"  ><%=rset.getString(nombreC)%></textarea>
                                     <%out.print(nombreC);%> 
                                 </td>
 
@@ -337,7 +337,7 @@
                                 <td class="style58">&nbsp;Poblaci&oacute;n Atendida</td>
                                 <td class="style33"><strong>
                                         <label>
-                                            <select name="slct_censo"  id="slct_censo" class="form-control">
+                                            <select name="<%=nombreC = nomCam + (contCam += 1)%>"  id="<%=nombreC%>" class="form-control">
                                                 <option>-- ESOCOJA CANTIDAD --</option>
                                                 <option value="1 A 500 HABITANTES">1 A 500 HABITANTES</option>
                                                 <option value="501 A 1,000 HABITANTES">501 A 1,000 HABITANTES</option>
@@ -352,11 +352,8 @@
                                                 <option value="500,001 A 1,000,000 HABITANTES">500,001 A 1,000,000 HABITANTES</option>
                                                 <option value="1,000,001 A 5,000,000 HABITANTES">1,000,001 A 5,000,000 HABITANTES</option>
                                                 <option value="+ DE 5,000,000 HABITANTES">+ DE 5,000,000 HABITANTES</option>
-
-
-
-                                            </select>
-                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" id="<%=nombreC%>"cols="40" class="form-control" id="campo_10" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                            </select> 
+                                            <textarea name="<%=nombreC%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" readonly><%=rset.getString(nombreC)%></textarea>
                                             <%out.print(nombreC);%>  
                                         </label>
                                     </strong></td>
@@ -390,8 +387,8 @@
                                 <td class="style58">N&uacute;mero de Camas Censables </td>
                                 <td class="style33"><strong>
                                         <label>
-                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" readonly   >Veracruz</textarea>
-                                            <%out.print(nombreC);%>   
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                            <%out.print(nombreC);%>     
                                         </label>
                                     </strong></td>
                                 <td class="style58">&nbsp;</td>
@@ -464,7 +461,7 @@
                                 </td>
 
                             </tr>
-                                    
+
                             <tr>
 
                                 <td colspan="3" class="style58">
@@ -544,20 +541,20 @@
                                 </td>
 
                             </tr>
-                        <tr>
-                            <td colspan="3" class="style58">
-                                <div class="panel panel-primary">
-                                    <a name="c" id="c"></a>
-                                    <!-- Default panel contents -->
+                            <tr>
+                                <td colspan="3" class="style58">
+                                    <div class="panel panel-primary">
+                                        <a name="c" id="c"></a>
+                                        <!-- Default panel contents -->
 
-                                    <div class="panel-heading">C. URGENCIAS </div>
-                                </div>
-                            </td>
-                            <td class="style58">&nbsp;</td>
-                            <td class="style58">&nbsp;</td>
-                            <td class="style58">&nbsp;</td>
-                            <td>&nbsp;</td>
-                        </tr>
+                                        <div class="panel-heading">C. URGENCIAS </div>
+                                    </div>
+                                </td>
+                                <td class="style58">&nbsp;</td>
+                                <td class="style58">&nbsp;</td>
+                                <td class="style58">&nbsp;</td>
+                                <td>&nbsp;</td>
+                            </tr>
                             <tr>
                                 <td height="26" class="style47"><div align="center" class="style58">C.1</div></td>
                                 <td class="style58">&iquest;Existe servicio de Urgencias?</td>
@@ -685,1028 +682,1028 @@
 
                             </tr>  
 
-                        <tr>
-                            <td colspan="3" class="style58">
-                                <div class="panel panel-primary">
-                                    <a name="e" id="e"></a>
-                                    <!-- Default panel contents -->
-                                    <div class="panel-heading">E. FARMACIA (36)</div>
-                                </div>
-                            </td>
-                            <td class="style58">&nbsp;</td>
-                            <td class="style58">&nbsp;</td>
-                            <td class="style58">&nbsp;</td>
-                            <td>&nbsp;</td>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68">
-                                    <div align="center" class="style58">
-                                        <div align="center">E.1</div>
-                                    </div>
-                                </td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Existe servicio de Farmacia?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.2<br/><br/>E.3</td>
-                                <td class="style58">Horario de Atención</td>
-                                <td class="style58"><span class="style47">De:
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                    A:
-                                    <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                    <%out.print(nombreC);%> 
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.4</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cu&aacute;nto personal atiende la Farmacia?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.5</td>
-                                <td class="style58">¿Cuántos turnos existen en la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.6</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuentan con un Responsable en la Farmacia?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.7</td>
-                                <td class="style58">¿Cuentan con un Químico responsable de la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.8</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿El Responsable de la Farmacia es el Qu&iacute;mico?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.9</td>
-                                <td class="style58">¿El personal de la Farmacia está capacitado y actualizado en el manejo y dispensación de medicamento?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.10</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿El personal de la Farmacia cuenta con el certificado de la COFEPRIS para el manejo y dispensación de medicamento?
-                                </td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.11</td>
-                                <td class="style58">¿Qué Insumos Médicos manejan en la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.12</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuántos Insumos Médicos diferentes manejan en la Farmacia?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.13</td>
-                                <td class="style58">¿Cuentan con Licencia Sanitaria en la Farmacia para el manejo de medicamento controlado?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.14</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">Indicar el número de la Licencia Sanitaria en la Farmacia para el manejo de medicamento controlado</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.15</td>
-                                <td class="style58">¿Cómo surten los Insumos Médicos en la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.16</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario del Insumo en la Farmacia?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.17</td>
-                                <td class="style58">¿Llevan algún control de semaforización de caducidades en la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.18</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Tienen insumo caducado en Farmacia?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.19</td>
-                                <td class="style58">¿Tienen insumo próximo a caducar en Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.20</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">Espacio aproximado de Farmacia m²</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.21</td>
-                                <td class="style58">Número de Anaqueles en Farmacia</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.22</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario de los Anaqueles en Farmacia?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.23</td>
-                                <td class="style58">¿Cuentan con Refrigerador en la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.24</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario del Refrigerador en la Farmacia?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.25</td>
-                                <td class="style58">¿Cuentan con Equipo de Cómputo en Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.26</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">Número de Equipos de Cómputo en Farmacia</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;
-
-                                </td>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.27</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario de los Equipos de Cómputo en Farmacia?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.28</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuentan con algún Sistema Informático en la Farmacia?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td>&nbsp;</td>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.29</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuáles son las funciones del Sistema Informático en la Farmacia?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-
-                                <td></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.30</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Existe algún tipo de validación de acuerdo al origen del paciente?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.31</td>
-                                <td class="style58">¿Cómo validan el origen del paciente en la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.32</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuál es el destino final de las recetas individuales y colectivas?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.33</td>
-                                <td class="style58">¿Cuentan con teléfono en la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.34</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuál es el número de teléfono en la Farmacia?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.35</td>
-                                <td class="style58">¿Qué tan frecuentemente falla el suministro de energía eléctrica en la Farmacia?</td>
-                                <td><textarea  name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.36</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuentan con planta de energía eléctrica para emergencias?</td>
-                                <td class="style58"><span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.37</td>
-                                <td class="style58">¿La planta de energía eléctrica para emergencias cubre el suministro a la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.38</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuentan con servicio de Internet en la Farmacia?	</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.39</td>
-                                <td class="style58">¿Cuál es el proveedor de Internet en la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.40</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Qué tan rápido es el servicio de Internet en la Farmacia?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.41</td>
-                                <td class="style58">¿Almacenan Insumo en otro lugar aparte de la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.42</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿En qué otro lugar (aparte de la Farmacia) almacenan insumos?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.43</td>
-                                <td class="style58">¿Quién abastece a la Farmacia de Insumos Médicos?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.44</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cada cuanto abastecen a la Farmacia?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.45</td>
-                                <td class="style58">¿Qué se hace en caso de que no se tenga algún insumo solicitado en la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.46</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Se lleva un registro de Insumos Solicitados contra Surtidos en la Farmacia?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.47</td>
-                                <td class="style58">¿Se lleva un registro de Piezas Solicitadas contra Surtidas en la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.48</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cúal es el Porcentaje de Abasto actual en la Farmacia?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.49</td>
-                                <td class="style58">¿Cuántos insumos solicitan en promedio por receta en la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.50</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿El Inventario en la Farmacia se encuentra actualizado?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.51</td>
-                                <td class="style58">Número de Recetas Surtidas por Día en Farmacia</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">E.52</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Capturan recetas en la Farmacia?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">E.53</td>
-                                <td class="style58">¿La captura de recetas en la Farmacia va al día?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-
-                                <td colspan="7" class="style58">
-                                    <div class="panel panel-primary">
-                                        <a name="b" id="b"></a>
-                                        <!-- Default panel contents -->
-                                        <button type="submit" name="guarda_seccion" value="E" class="btn btn-primary btn-lg btn-block" >Guardar datos Secci&oacute;n E</button>
-                                    </div>
-                                </td>
-
-                            </tr>          
                             <tr>
                                 <td colspan="3" class="style58">
                                     <div class="panel panel-primary">
-                                        <a name="f" id="f"></a>
+                                        <a name="e" id="e"></a>
                                         <!-- Default panel contents -->
-                                        <div class="panel-heading">F. ALMACÉN</div>
+                                        <div class="panel-heading">E. FARMACIA (36)</div>
                                     </div>
                                 </td>
                                 <td class="style58">&nbsp;</td>
                                 <td class="style58">&nbsp;</td>
                                 <td class="style58">&nbsp;</td>
                                 <td>&nbsp;</td>
-                            </tr> 
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68">
-                                    <div align="center" class="style58">
-                                        <div align="center">F.1</div>
-                                    </div>
-                                </td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Existe servicio de Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68">
+                                        <div align="center" class="style58">
+                                            <div align="center">E.1</div>
+                                        </div>
+                                    </td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Existe servicio de Farmacia?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.2<br/><br/>E.3</td>
+                                    <td class="style58">Horario de Atención</td>
+                                    <td class="style58"><span class="style47">De:
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                        A:
                                         <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
                                         <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.2<br /><br />F.3</td>
-                                <td class="style58">Horario de atención</td>
-                                <td>De:
-                                    <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" readonly="readonly"><%=rset.getString(nombreC)%></textarea>
-                                    <%//out.print(nombreC);%>   
-                                    a: 
-                                    <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" readonly="readonly"><%=rset.getString(nombreC)%></textarea>
-                                    <%//out.print(nombreC);%>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.4</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuánto personal atiende el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.5</td>
-                                <td class="style58">¿Cuántos turnos existen en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr> 
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.6</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuentan con un Responsable del Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.7</td>
-                                <td class="style58">¿Cuentan con un Químico responsable en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.8</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿El Responsable del Almacén es el Químico?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.9</td>
-                                <td class="style58">¿El personal del Almacén está capacitado y actualizado en el manejo y dispensación de medicamento?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr> 
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.10</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿El personal del Almacén cuenta con el certificado de la COFEPRIS para el manejo y dispensación de medicamento?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.11</td>
-                                <td class="style58">¿Qué Insumos Médicos manejan en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>         
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.12</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuántos Insumos Médicos diferentes manejan en el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.13</td>
-                                <td class="style58">¿Cuentan con Licencia Sanitaria en el Almacén para el manejo de medicamento controlado?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>        
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.14</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">Indicar el número de la Licencia Sanitaria en el Almacén para el manejo de medicamento controlado</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.15</td>
-                                <td class="style58">¿Cómo surten los Insumos Médicos en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr> 
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.16</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario del Insumo en el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.17</td>
-                                <td class="style58">¿Llevan algún control de semaforización de caducidades en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>           
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.18</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Tienen insumo caducado en el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.19</td>
-                                <td class="style58">¿Tienen insumo próximo a caducar en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>       
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.20</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">Espacio aproximado de Almacén m²</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.21</td>
-                                <td class="style58">Número de Anaqueles o Racks en Almacén</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.22</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario de los Anaqueles o Racks?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.23</td>
-                                <td class="style58">¿Cuentan con Anden para carga y descarga en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.24</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuentan con Rampa para carga y descarga en el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.25</td>
-                                <td class="style58">¿Cuáles son las dimensiones de la Rampa?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>        
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.26</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuáles son las condiciones para carga y descarga?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.27</td>
-                                <td class="style58">¿Cuentan con Refrigerador en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr> 
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.28</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario del Refrigerador en el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.29</td>
-                                <td class="style58">¿Cuentan con Equipo de Cómputo en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>        
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.30</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">Número de Equipos de Cómputo en Almacén</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.31</td>
-                                <td class="style58">¿Quién es el propietario de los Equipos de Cómputo?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>       
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.32</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuentan con algún Sistema Informático en el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.33</td>
-                                <td class="style58">¿Cuáles son las funciones del Sistema Informático en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>        
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.34</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuál es el destino final de las recetas individuales y colectivas?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.35</td>
-                                <td class="style58">¿Cuentan con teléfono en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>  
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.36</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuál es el número de teléfono en el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.37</td>
-                                <td class="style58">¿Qué tan frecuentemente falla el suministro de energía eléctrica en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>    
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.38</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuentan con servicio de Internet en el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.39</td>
-                                <td class="style58">¿Cuál es el proveedor de Internet en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>   
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.40</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Qué tan rápido es el servicio de Internet en el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.41</td>
-                                <td class="style58">¿Almacenan Insumo en otro lugar aparte del Almacén y la Farmacia?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.42</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿En qué otro lugar aparte del Almacén y la Farmacia almacenan insumos?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.43</td>
-                                <td class="style58">¿Cuentan con sub almacenes en los pisos?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>        
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.44</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Quién abastece al Almacén de Insumos Médicos?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.45</td>
-                                <td class="style58">¿Cada cuanto abastecen al Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr> 
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.46</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Qué se hace en caso de que no se tenga algún insumo solicitado en el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.47</td>
-                                <td class="style58">¿Se lleva un registro de Insumos Solicitados contra Surtidos en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.48</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Se lleva un registro de Piezas Solicitadas contra Surtidas en el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.49</td>
-                                <td class="style58">¿Cúal es el Porcentaje de Abasto actual en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr> 
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.50</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿Cuántos Insumos se solicitan en promedio por receta o requerimiento en el Almacén?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.51</td>
-                                <td class="style58">¿El Inventario en el Almacén se encuentra actualizado?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr> 
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.52</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">Número de Recetas y/o Requerimientos Surtidos por Día en Almacén</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">F.53</td>
-                                <td class="style58">¿Capturan recetas y/o requerimientos en el Almacén?</td>
-                                <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                    <%out.print(nombreC);%>    
-                                    </label>
-                                    </p></td>
-                            </tr>
-                            <tr>
-                                <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
-                                        <div align="center">F.54</div>
-                                    </div></td>
-                                <td bgcolor="#FFFFFF" class="style58">¿La captura de recetas y/o requerimientos en el Almacén va al día?</td>
-                                <td class="style58">&nbsp;<span class="style47">
-                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
-                                        <%out.print(nombreC);%> 
-                                </td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">&nbsp;</td>
-                                <td class="style58">&nbsp;</td>
-                                <td>&nbsp;</td>
-                            </tr>
-                            <tr>
+                                    </td>
+                                </tr>
 
-                                <td colspan="7" class="style58">
-                                    <div class="panel panel-primary">
-                                        <a name="b" id="b"></a>
-                                        <!-- Default panel contents -->
-                                        <button type="submit" name="guarda_seccion" value="F" class="btn btn-primary btn-lg btn-block" >Guardar datos Secci&oacute;n F</button>
-                                    </div>
-                                </td>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.4</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cu&aacute;nto personal atiende la Farmacia?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.5</td>
+                                    <td class="style58">¿Cuántos turnos existen en la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.6</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuentan con un Responsable en la Farmacia?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.7</td>
+                                    <td class="style58">¿Cuentan con un Químico responsable de la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
 
-                            </tr>            
-                        <!-- Preguntas Censos Plus Ver-->
-                        <%int nume = 0;
-                            int contCam_3 = 43;
-                        %>
-                        <tr>
-                            <td colspan="7" class="style58">
-                                <div class="panel panel-primary">
-                                    <a name="h" id="h"></a>
-                                    <!-- Default panel contents -->
-                                    <div class="panel-heading">G. OBSERVACIONES GENERALES</div>
-                                </div>
-                            </td>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.8</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿El Responsable de la Farmacia es el Qu&iacute;mico?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.9</td>
+                                    <td class="style58">¿El personal de la Farmacia está capacitado y actualizado en el manejo y dispensación de medicamento?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
 
-                        </tr>
-                            <tr>
-                                <td colspan="7" class="style58"><table width="637" border="0" align="center" cellpadding="2">
-                                        <tr>
-                                            <td width="192"><strong class="style58"></strong></td>
-                                            <td width="431"><div align="center"></div></td>
-                                        </tr>
-                                        <tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.10</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿El personal de la Farmacia cuenta con el certificado de la COFEPRIS para el manejo y dispensación de medicamento?
+                                    </td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.11</td>
+                                    <td class="style58">¿Qué Insumos Médicos manejan en la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.12</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuántos Insumos Médicos diferentes manejan en la Farmacia?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.13</td>
+                                    <td class="style58">¿Cuentan con Licencia Sanitaria en la Farmacia para el manejo de medicamento controlado?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
 
-                                            <td colspan="7"><div align="center" class="style58"><strong>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.14</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">Indicar el número de la Licencia Sanitaria en la Farmacia para el manejo de medicamento controlado</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.15</td>
+                                    <td class="style58">¿Cómo surten los Insumos Médicos en la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
 
-                                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="140" rows="10" class="form-control style58" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
-                                                        <%out.print(nombreC);%> 
-                                                    </strong></div></td>
-                                        </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.16</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario del Insumo en la Farmacia?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.17</td>
+                                    <td class="style58">¿Llevan algún control de semaforización de caducidades en la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
 
-                                    </table></td>
-                            </tr>
-                            <tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.18</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Tienen insumo caducado en Farmacia?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.19</td>
+                                    <td class="style58">¿Tienen insumo próximo a caducar en Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
 
-                                <td colspan="7" class="style58">
-                                    <div class="panel panel-primary">
-                                        <a name="b" id="b"></a>
-                                        <!-- Default panel contents -->
-                                        <button type="submit" name="guarda_seccion" value="G" class="btn btn-primary btn-lg btn-block" >Guardar datos Secci&oacute;n G</button>
-                                    </div>
-                                </td>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.20</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">Espacio aproximado de Farmacia m²</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.21</td>
+                                    <td class="style58">Número de Anaqueles en Farmacia</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
 
-                            </tr>            
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.22</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario de los Anaqueles en Farmacia?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.23</td>
+                                    <td class="style58">¿Cuentan con Refrigerador en la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.24</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario del Refrigerador en la Farmacia?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.25</td>
+                                    <td class="style58">¿Cuentan con Equipo de Cómputo en Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.26</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">Número de Equipos de Cómputo en Farmacia</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;
+
+                                    </td>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.27</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario de los Equipos de Cómputo en Farmacia?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                </tr>
+
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.28</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuentan con algún Sistema Informático en la Farmacia?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td>&nbsp;</td>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.29</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuáles son las funciones del Sistema Informático en la Farmacia?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+
+                                    <td></td>
+                                </tr>
+
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.30</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Existe algún tipo de validación de acuerdo al origen del paciente?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.31</td>
+                                    <td class="style58">¿Cómo validan el origen del paciente en la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.32</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuál es el destino final de las recetas individuales y colectivas?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.33</td>
+                                    <td class="style58">¿Cuentan con teléfono en la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.34</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuál es el número de teléfono en la Farmacia?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.35</td>
+                                    <td class="style58">¿Qué tan frecuentemente falla el suministro de energía eléctrica en la Farmacia?</td>
+                                    <td><textarea  name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.36</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuentan con planta de energía eléctrica para emergencias?</td>
+                                    <td class="style58"><span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.37</td>
+                                    <td class="style58">¿La planta de energía eléctrica para emergencias cubre el suministro a la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.38</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuentan con servicio de Internet en la Farmacia?	</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.39</td>
+                                    <td class="style58">¿Cuál es el proveedor de Internet en la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.40</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Qué tan rápido es el servicio de Internet en la Farmacia?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.41</td>
+                                    <td class="style58">¿Almacenan Insumo en otro lugar aparte de la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.42</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿En qué otro lugar (aparte de la Farmacia) almacenan insumos?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.43</td>
+                                    <td class="style58">¿Quién abastece a la Farmacia de Insumos Médicos?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.44</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cada cuanto abastecen a la Farmacia?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.45</td>
+                                    <td class="style58">¿Qué se hace en caso de que no se tenga algún insumo solicitado en la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.46</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Se lleva un registro de Insumos Solicitados contra Surtidos en la Farmacia?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.47</td>
+                                    <td class="style58">¿Se lleva un registro de Piezas Solicitadas contra Surtidas en la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.48</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cúal es el Porcentaje de Abasto actual en la Farmacia?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.49</td>
+                                    <td class="style58">¿Cuántos insumos solicitan en promedio por receta en la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.50</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿El Inventario en la Farmacia se encuentra actualizado?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.51</td>
+                                    <td class="style58">Número de Recetas Surtidas por Día en Farmacia</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">E.52</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Capturan recetas en la Farmacia?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">E.53</td>
+                                    <td class="style58">¿La captura de recetas en la Farmacia va al día?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="7" class="style58">
+                                        <div class="panel panel-primary">
+                                            <a name="b" id="b"></a>
+                                            <!-- Default panel contents -->
+                                            <button type="submit" name="guarda_seccion" value="E" class="btn btn-primary btn-lg btn-block" >Guardar datos Secci&oacute;n E</button>
+                                        </div>
+                                    </td>
+
+                                </tr>          
+                                <tr>
+                                    <td colspan="3" class="style58">
+                                        <div class="panel panel-primary">
+                                            <a name="f" id="f"></a>
+                                            <!-- Default panel contents -->
+                                            <div class="panel-heading">F. ALMACÉN</div>
+                                        </div>
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr> 
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68">
+                                        <div align="center" class="style58">
+                                            <div align="center">F.1</div>
+                                        </div>
+                                    </td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Existe servicio de Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.2<br /><br />F.3</td>
+                                    <td class="style58">Horario de atención</td>
+                                    <td>De:
+                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%//out.print(nombreC);%>   
+                                        a: 
+                                        <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%//out.print(nombreC);%>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.4</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuánto personal atiende el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.5</td>
+                                    <td class="style58">¿Cuántos turnos existen en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr> 
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.6</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuentan con un Responsable del Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.7</td>
+                                    <td class="style58">¿Cuentan con un Químico responsable en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.8</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿El Responsable del Almacén es el Químico?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.9</td>
+                                    <td class="style58">¿El personal del Almacén está capacitado y actualizado en el manejo y dispensación de medicamento?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr> 
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.10</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿El personal del Almacén cuenta con el certificado de la COFEPRIS para el manejo y dispensación de medicamento?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.11</td>
+                                    <td class="style58">¿Qué Insumos Médicos manejan en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>         
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.12</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuántos Insumos Médicos diferentes manejan en el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.13</td>
+                                    <td class="style58">¿Cuentan con Licencia Sanitaria en el Almacén para el manejo de medicamento controlado?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>        
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.14</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">Indicar el número de la Licencia Sanitaria en el Almacén para el manejo de medicamento controlado</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.15</td>
+                                    <td class="style58">¿Cómo surten los Insumos Médicos en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr> 
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.16</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario del Insumo en el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.17</td>
+                                    <td class="style58">¿Llevan algún control de semaforización de caducidades en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>           
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.18</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Tienen insumo caducado en el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.19</td>
+                                    <td class="style58">¿Tienen insumo próximo a caducar en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>       
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.20</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">Espacio aproximado de Almacén m²</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.21</td>
+                                    <td class="style58">Número de Anaqueles o Racks en Almacén</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.22</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario de los Anaqueles o Racks?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.23</td>
+                                    <td class="style58">¿Cuentan con Anden para carga y descarga en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.24</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuentan con Rampa para carga y descarga en el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.25</td>
+                                    <td class="style58">¿Cuáles son las dimensiones de la Rampa?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>        
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.26</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuáles son las condiciones para carga y descarga?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.27</td>
+                                    <td class="style58">¿Cuentan con Refrigerador en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr> 
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.28</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Quién es el propietario del Refrigerador en el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.29</td>
+                                    <td class="style58">¿Cuentan con Equipo de Cómputo en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>        
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.30</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">Número de Equipos de Cómputo en Almacén</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.31</td>
+                                    <td class="style58">¿Quién es el propietario de los Equipos de Cómputo?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>       
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.32</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuentan con algún Sistema Informático en el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.33</td>
+                                    <td class="style58">¿Cuáles son las funciones del Sistema Informático en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>        
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.34</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuál es el destino final de las recetas individuales y colectivas?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.35</td>
+                                    <td class="style58">¿Cuentan con teléfono en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>  
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.36</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuál es el número de teléfono en el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.37</td>
+                                    <td class="style58">¿Qué tan frecuentemente falla el suministro de energía eléctrica en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>    
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.38</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuentan con servicio de Internet en el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.39</td>
+                                    <td class="style58">¿Cuál es el proveedor de Internet en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>   
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.40</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Qué tan rápido es el servicio de Internet en el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.41</td>
+                                    <td class="style58">¿Almacenan Insumo en otro lugar aparte del Almacén y la Farmacia?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.42</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿En qué otro lugar aparte del Almacén y la Farmacia almacenan insumos?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.43</td>
+                                    <td class="style58">¿Cuentan con sub almacenes en los pisos?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>        
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.44</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Quién abastece al Almacén de Insumos Médicos?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.45</td>
+                                    <td class="style58">¿Cada cuanto abastecen al Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr> 
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.46</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Qué se hace en caso de que no se tenga algún insumo solicitado en el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.47</td>
+                                    <td class="style58">¿Se lleva un registro de Insumos Solicitados contra Surtidos en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.48</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Se lleva un registro de Piezas Solicitadas contra Surtidas en el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.49</td>
+                                    <td class="style58">¿Cúal es el Porcentaje de Abasto actual en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr> 
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.50</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿Cuántos Insumos se solicitan en promedio por receta o requerimiento en el Almacén?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.51</td>
+                                    <td class="style58">¿El Inventario en el Almacén se encuentra actualizado?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr> 
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.52</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">Número de Recetas y/o Requerimientos Surtidos por Día en Almacén</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">F.53</td>
+                                    <td class="style58">¿Capturan recetas y/o requerimientos en el Almacén?</td>
+                                    <td><textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                        <%out.print(nombreC);%>    
+                                        </label>
+                                        </p></td>
+                                </tr>
+                                <tr>
+                                    <td bgcolor="#FFFFFF" class="style68"><div align="center" class="style58">
+                                            <div align="center">F.54</div>
+                                        </div></td>
+                                    <td bgcolor="#FFFFFF" class="style58">¿La captura de recetas y/o requerimientos en el Almacén va al día?</td>
+                                    <td class="style58">&nbsp;<span class="style47">
+                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="40" class="form-control" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea></span>
+                                            <%out.print(nombreC);%> 
+                                    </td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td class="style58">&nbsp;</td>
+                                    <td>&nbsp;</td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="7" class="style58">
+                                        <div class="panel panel-primary">
+                                            <a name="b" id="b"></a>
+                                            <!-- Default panel contents -->
+                                            <button type="submit" name="guarda_seccion" value="F" class="btn btn-primary btn-lg btn-block" >Guardar datos Secci&oacute;n F</button>
+                                        </div>
+                                    </td>
+
+                                </tr>            
+                                <!-- Preguntas Censos Plus Ver-->
+                                <%int nume = 0;
+                                    int contCam_3 = 43;
+                                %>
+                                <tr>
+                                    <td colspan="7" class="style58">
+                                        <div class="panel panel-primary">
+                                            <a name="h" id="h"></a>
+                                            <!-- Default panel contents -->
+                                            <div class="panel-heading">G. OBSERVACIONES GENERALES</div>
+                                        </div>
+                                    </td>
+
+                                </tr>
+                                <tr>
+                                    <td colspan="7" class="style58"><table width="637" border="0" align="center" cellpadding="2">
+                                            <tr>
+                                                <td width="192"><strong class="style58"></strong></td>
+                                                <td width="431"><div align="center"></div></td>
+                                            </tr>
+                                            <tr>
+
+                                                <td colspan="7"><div align="center" class="style58"><strong>
+
+                                                            <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" cols="140" rows="10" class="form-control style58" id="<%=nombreC%>" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
+                                                            <%out.print(nombreC);%> 
+                                                        </strong></div></td>
+                                            </tr>
+
+                                        </table></td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="7" class="style58">
+                                        <div class="panel panel-primary">
+                                            <a name="b" id="b"></a>
+                                            <!-- Default panel contents -->
+                                            <button type="submit" name="guarda_seccion" value="G" class="btn btn-primary btn-lg btn-block" >Guardar datos Secci&oacute;n G</button>
+                                        </div>
+                                    </td>
+
+                                </tr>            
                         </form>
                         <tr>
                             <td colspan="7" class="style47"><div align="center"><strong><span class="style41"><strong><strong>
@@ -1744,7 +1741,7 @@
                                                 // String ima=%><%
                                                     //out.print(""+ima);
                                                     //Parameter("ima");
-%>
+                                            %>
                                             <div class="carousel-inner" align="center" >
                                                 <div class="item active"><img src="imagenes/inicio2.png" width="500" id="imagen" /></div>
 

@@ -92,7 +92,7 @@
       </tr>
        <tr>
         <td width="198" >&nbsp;</td>
-        <td width="128" align="center" ><form action="indexMain.jsp" method="post" name="form"><input name="submit" type="submit"  value="Actualizar" class="btn btn-primary btn-md btn-block" /></form></td>
+        <td width="128" align="center" ><form action="indexCap.jsp" method="post" name="form"><input name="submit" type="submit"  value="Actualizar" class="btn btn-primary btn-md btn-block" /></form></td>
         <td width="210" >&nbsp;</td>
       </tr>
       <tr>
