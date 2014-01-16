@@ -118,6 +118,13 @@
                     <li><a data-toggle="modal" href="#myModal">Sistemas</a></li>
                     <li><a data-toggle="modal" href="/CensosVer/login?ban=3">Salir</a></li>
                 </ul>
+                <!--div class="bs-example">
+                                    <p class="popover-examples">
+                                        <a href="#" class="btn btn-large btn-primary" data-toggle="popover" data-content="And here's some amazing content. It's very engaging."> 
+                                            <span class="glyphicon glyphicon-user"></span>
+                                        </a>
+                                    </p>
+                            </div-->
                 <h3 class="text-primary"><a name="top" id="top"></a>Captura de Censos Hospitales</h3>
             </div>
         </div>
@@ -127,26 +134,15 @@
                 <td width="418">
                     <table width="1081" border="0">
                         <tr>
-                            <td colspan="3">
+                            <td colspan="12">
                                 <div class="panel panel-primary">
+                                Bienvenido: <%=rset.getString("campo_1")%>
                                     <!-- Default panel contents -->
                                     <div class="panel-heading"><strong>LLENE LOS CAMPOS CON LAS RESPUESTAS OBTENIDAS</strong></div>
                                 </div>
                             </td>
                             <td  class="style43 style51">&nbsp;</td>
-                            <td colspan="3"  class="style58">Bienvenido:
-                                <div class="bs-example">
-                                    <p class="popover-examples">
-                                        <a href="#" class="btn btn-large btn-primary" data-toggle="popover" data-content="And here's some amazing content. It's very engaging."> 
-                                            <span class="glyphicon glyphicon-user"></span>
-                                        </a>
-                                    </p>
-                                </div>
-                                <div class="bs-example">
-                                    <p class="popover-examples">
-                                        <a href="#" class="btn btn-large btn-primary" data-toggle="popover" data-content="And here's some amazing content. It's very engaging.">Popover Example</a>
-                                    </p>    
-                                </div>
+                          <td colspan="3"  class="style58">
                             </td>
                         </tr>
                         <tr>
@@ -360,7 +356,6 @@
 
 
                                             </select>
-                                            <%//=nombreC=nomCam+(contCam+=1)%>
                                             <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" id="<%=nombreC%>"cols="40" class="form-control" id="campo_10" onkeypress="return handleEnter(this, event);" ><%=rset.getString(nombreC)%></textarea>
                                             <%out.print(nombreC);%>  
                                         </label>
@@ -1779,9 +1774,9 @@
                     </table>
                 </td>
             </tr>
-            <form action="huge.jsp" method="post">
+            <!--form action="huge.jsp" method="post">
                 <input type="submit" name="envio" class="btn btn-primary btn-lg btn-block" /> 
-            </form>
+            </form-->
         </table>
 
 

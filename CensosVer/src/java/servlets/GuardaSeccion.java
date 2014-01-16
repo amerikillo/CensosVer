@@ -94,7 +94,7 @@ public class GuardaSeccion extends HttpServlet {
                 for (int i = 1; i < 28; i++) {
                     qry = qry + "campo_"+i+"='"+request.getParameter("campo_"+i)+"', ";
                 }
-                qry = qry + " campo_28='"+request.getParameter("campo_28")+"' where campo_4 = '"+request.getParameter("campo_4")+"' ;";
+                qry = qry + " campo_28='"+request.getParameter("campo_28")+"' where id_uni = '"+sesion.getAttribute("id_uni")+"' ;";
                 con.actualizar(qry);
                 response.sendRedirect("capturaCensosH.jsp");
             }
@@ -105,7 +105,7 @@ public class GuardaSeccion extends HttpServlet {
                 for (int i = 29; i < 33; i++) {
                     qry = qry + "campo_"+i+"='"+request.getParameter("campo_"+i)+"', ";
                 }
-                qry = qry + " campo_33='"+request.getParameter("campo_33")+"' where campo_4 = '"+request.getParameter("campo_4")+"' ;";
+                qry = qry + " campo_33='"+request.getParameter("campo_33")+"' where id_uni = '"+sesion.getAttribute("id_uni")+"' ;";
                 out.println(qry);
                 con.actualizar(qry);
                 response.sendRedirect("capturaCensosH.jsp");
@@ -117,7 +117,7 @@ public class GuardaSeccion extends HttpServlet {
                 for (int i = 34; i < 40; i++) {
                     qry = qry + "campo_"+i+"='"+request.getParameter("campo_"+i)+"', ";
                 }
-                qry = qry + " campo_40='"+request.getParameter("campo_40")+"' where campo_4 = '"+request.getParameter("campo_4")+"' ;";
+                qry = qry + " campo_40='"+request.getParameter("campo_40")+"' where id_uni = '"+sesion.getAttribute("id_uni")+"' ;";
                 con.actualizar(qry);
                 response.sendRedirect("capturaCensosH.jsp");
             }
@@ -128,7 +128,7 @@ public class GuardaSeccion extends HttpServlet {
                 for (int i = 41; i < 43; i++) {
                     qry = qry + "campo_"+i+"='"+request.getParameter("campo_"+i)+"', ";
                 }
-                qry = qry + " campo_43='"+request.getParameter("campo_43")+"' where campo_4 = '"+request.getParameter("campo_4")+"' ;";
+                qry = qry + " campo_43='"+request.getParameter("campo_43")+"' where id_uni = '"+sesion.getAttribute("id_uni")+"' ;";
                 con.actualizar(qry);
                 response.sendRedirect("capturaCensosH.jsp");
             }
@@ -139,7 +139,7 @@ public class GuardaSeccion extends HttpServlet {
                 for (int i = 44; i < 96; i++) {
                     qry = qry + "campo_"+i+"='"+request.getParameter("campo_"+i)+"', ";
                 }
-                qry = qry + " campo_96='"+request.getParameter("campo_96")+"' where campo_4 = '"+request.getParameter("campo_4")+"' ;";
+                qry = qry + " campo_96='"+request.getParameter("campo_96")+"' where id_uni = '"+sesion.getAttribute("id_uni")+"' ;";
                 con.actualizar(qry);
                 response.sendRedirect("capturaCensosH.jsp");
             }
@@ -150,14 +150,14 @@ public class GuardaSeccion extends HttpServlet {
                 for (int i = 97; i < 150; i++) {
                     qry = qry + "campo_"+i+"='"+request.getParameter("campo_"+i)+"', ";
                 }
-                qry = qry + " campo_150='"+request.getParameter("campo_150")+"' where campo_4 = '"+request.getParameter("campo_4")+"' ;";
+                qry = qry + " campo_150='"+request.getParameter("campo_150")+"' where id_uni = '"+sesion.getAttribute("id_uni")+"' ;";
                 con.actualizar(qry);
                 response.sendRedirect("capturaCensosH.jsp");
             }
             
             if (request.getParameter("guarda_seccion").equals("G")) {
                 out.println("Hola");
-                String qry = "update tb_g set  campo_151='"+request.getParameter("campo_151")+"' where campo_4 = '"+request.getParameter("campo_4")+"' ;";
+                String qry = "update tb_g set  campo_151='"+request.getParameter("campo_151")+"' where id_uni = '"+sesion.getAttribute("id_uni")+"' ;";
                 con.actualizar(qry);
                 response.sendRedirect("capturaCensosH.jsp");
             }
@@ -169,6 +169,8 @@ public class GuardaSeccion extends HttpServlet {
                 Logger.getLogger(GuardaSeccion.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
+        
+        //response.sendRedirect("capturaCensosH.jsp");
 
     }// end of doPost
 
