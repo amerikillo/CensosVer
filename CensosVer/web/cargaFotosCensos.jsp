@@ -25,31 +25,20 @@
 
     String id_uni = "", juris = "", muni = "", nombre_gnk = "", tipo = "", hora = "", fecha = "";
     int ban = 0;
-
     try {
         obj.conectar();
-        //int pos2=0;
-        qry = "select distinct juris from tb_unidades order by id_uni+0 asc;";
-        rset = obj.consulta(qry);
-        //obj.cierraConexion();
-    } catch (SQLException ex) {
-        Logger.getLogger(login.class.getName()).log(Level.SEVERE, null, ex);
-    }
-
-    try {
-        if (request.getParameter("consultar").equals("1")) {
-            rset2 = obj.consulta("select id_uni, juris, muni, nombre_gnk, tipo from tb_unidades where nombre_gnk = '" + request.getParameter("slct_U") + "' ");
-            while (rset2.next()) {
-                id_uni = rset2.getString(1);
-                juris = rset2.getString(2);
-                muni = rset2.getString(3);
-                nombre_gnk = rset2.getString(4);
-                tipo = rset2.getString(5);
-                hora = df3.format(new java.util.Date());
-                fecha = df2.format(new java.util.Date());
-                ban = 1;
-            }
+        rset2 = obj.consulta("select id_uni, juris, muni, nombre_gnk, tipo from tb_unidades where id_uni = '" + sesion.getAttribute("id_uni") + "' ");
+        while (rset2.next()) {
+            id_uni = rset2.getString(1);
+            juris = rset2.getString(2);
+            muni = rset2.getString(3);
+            nombre_gnk = rset2.getString(4);
+            tipo = rset2.getString(5);
+            hora = df3.format(new java.util.Date());
+            fecha = df2.format(new java.util.Date());
+            ban = 1;
         }
+        obj.cierraConexion();
     } catch (Exception e) {
         id_uni = "";
         juris = "";
@@ -82,26 +71,17 @@
                 <div class="col-md-4">.col-md-4</div>
             </div-->
 
-            <form name ="forma-login" id="forma-login" class="marco" method="post" >
+            <form name ="forma-login" class="marco" method="post" >
                 <!--label for="username" class="uname" data-icon="u" > Your email or username </label-->
                 <div class="row">
                     <div class="col-md-4"><img src="imagenes/GNKL_Small.JPG" ></div>
-                    <div class="col-md-8"><h2>Toma de Censos</h2></div>
+                    <div class="col-md-8"><h2>Subida de Imagenes de Unidades de Salud</h2></div>
                 </div>
 
                 <div class="row">
                     <div class="col-md-12">
                         <div class="input-group">
-                            <span class="input-group-addon"><label class=" glyphicon glyphicon-hand-right"></label></span>
-                            <select name="slct_H" id="slct_H" onchange="SelectUni(this.form);" class="form-control">
-                                <option>-- Seleccione Jurisdicci&oacute;n --</option>
-                                <%                                            while (rset.next()) {
-                                %>
-                                <option value="<%=rset.getString("juris")%>"><%=rset.getString("juris")%></option>
-                                <%
-                                    }
-                                %>
-                            </select> 
+
                         </div>
                     </div>
                 </div>
@@ -109,34 +89,29 @@
                 <div class="row">
                     <div class="col-md-12">
                         <div class="input-group">
-                            <span class="input-group-addon"><label class="glyphicon glyphicon-header"></label></span>
-                            <select name="slct_U" id="slct_U" class="form-control">
-                                <option>-- Seleccione Hospital --</option>
-                            </select>
+
                         </div>
                     </div>
                 </div> 
 
                 <br>              
-                <button name="consultar" value="1" class="btn btn-primary btn-lg btn-block" type="submit">Consultar</button>
+                <!--button name="consultar" value="1" class="btn btn-primary btn-lg btn-block" type="submit">Consultar</button>
                 <!--button class="btn btn-primary btn-lg btn-block" type="button" onclick="window.location='modificarCensoH.jsp'">Modificar</button-->
             </form>
 
-            <form name ="forma-login" id="forma-login" class="marco" action="CapturaCensos" method="post" >
-                <br>
-
-                <div class="col-lg-12"><h4>Datos de la Unidad a Censar</h4></div>
+             <form method="post" class="marco"  action="FileUploadServlet" enctype="multipart/form-data" name="form1"> 
+               <br>
+               <div class="col-lg-2"><a href="indexCap.jsp">Regresar</a></div>
+                <div class="col-lg-8"><h4>Datos de la Unidad a Censar</h4></div>
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="input-group">
                             <span class="input-group-addon"><label class=" glyphicon glyphicon-saved"></label></span>
                             <input type="text" name="id_uni" id="id_uni" class="form-control" placeholder="Clave del Hospital" value="<%=id_uni%>" readonly="readonlye">
                         </div>
                     </div>
-                </div>
 
-                <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="input-group">
                             <span class="input-group-addon"><label class=" glyphicon glyphicon-header"></label></span>
                             <input type="text" name="nombre_gnk" id="nombre_gnk" class="form-control" placeholder="Nombre del Hospital"  value="<%=nombre_gnk%>" readonly="readonlye">
@@ -147,17 +122,13 @@
 
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="input-group">
                             <span class="input-group-addon"><label class=" glyphicon glyphicon-info-sign"></label></span>
                             <input type="text" name="tipo" id="tipo" class="form-control" placeholder="Categor&iacute;a del Hospital" value="<%=tipo%>" readonly="readonlye">
                         </div>
                     </div>
-                </div>
-
-
-                <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="input-group">
                             <span class="input-group-addon"><label class=" glyphicon glyphicon-hand-right"></label></span>
                             <input type="text" name="juris" id="juris" class="form-control" placeholder="Jurisdicci&oacute;n" value="<%=juris%>" readonly="readonlye">
@@ -166,16 +137,13 @@
                 </div>
 
                 <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="input-group">
                             <span class="input-group-addon"><label class=" glyphicon glyphicon-home"></label></span>
                             <input type="text" name="muni" id="muni" class="form-control" placeholder="Municipio" value="<%=muni%>" readonly="readonlye">
                         </div>
                     </div>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-12">
+                    <div class="col-md-6">
                         <div class="input-group">
                             <span class="input-group-addon"><label class=" glyphicon glyphicon-calendar"></label></span>
                             <input type="text" name="fecha" id="fecha" class="form-control" placeholder="Fecha de Toma del Censo" value="<%=fecha%>" readonly="readonlye">
@@ -183,38 +151,41 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="input-group">
-                            <span class="input-group-addon"><label class=" glyphicon glyphicon-time"></label></span>
-                            <input type="text" name="hora" id="hora" class="form-control" placeholder="Hora Inicio de toma del Censo" value="<%=hora%>" readonly="readonlye">
-                        </div>
+                
+
+            <div class="container">
+                    <div class="row-fluid">
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <th>Selecciona la imagen 1</th><td><input type="file" name="file1" accept=".JPG"/></td>
+                                </tr>
+                                <tr>
+                                    <th>Selecciona la imagen 2</th><td><input type="file" name="file2" accept=".JPG"/></td>
+                                </tr>
+                                <tr>
+                                    <th>Selecciona la imagen 3</th><td><input type="file" name="file3" accept=".JPG"/></td>
+                                </tr>
+                                <tr>
+                                    <th>Selecciona la imagen 4</th><td><input type="file" name="file4" accept=".JPG"/></td>
+                                </tr>
+                                <tr>
+                                    <th>Selecciona la imagen 5</th><td><input type="file" name="file5" accept=".JPG"/></td>
+                                </tr>
+                                <tr>
+                                    <th>Selecciona la imagen 6</th><td><input type="file" name="file6" accept=".JPG"/></td>
+                                </tr>
+                                <tr>
+                                    <th>Selecciona la imagen 7</th><td><input type="file" name="file7" accept=".JPG"/></td>
+                                </tr>
+                                <tr>
+
+                                    <td colspan="2"><button class="btn btn-block btn-primary">CARGAR IMAGENES</button></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="input-group">
-                            <span class="input-group-addon"><label class=" glyphicon glyphicon-pencil"></label></span>
-                            <select name="encuestador" id="encuestador" class="form-control">
-                                <option>Encuestador 1</option>
-                                <option>Encuestador 2</option>
-                                <option>Encuestador 3</option>
-                            </select>
-                        </div>
-                    </div>
-                </div>
-
-                <br> 
-                <%
-                    if (ban == 1) {
-                %>             
-                <button name="envio" value = "1" class="btn btn-primary btn-lg btn-block" type="submit">Realizar Censo</button>
-                <button name="envio" value = "2" class="btn btn-primary btn-lg btn-block" type="submit">Cargar Imagenes</button>
-                <%
-                    }
-                %>
-                <br>
             </form>
             <br>
 
@@ -230,6 +201,3 @@
         <script type="text/javascript" src="js/code_js.js"></script>
     </body>
 </html>
-<%
-    sesion.invalidate();
-%>

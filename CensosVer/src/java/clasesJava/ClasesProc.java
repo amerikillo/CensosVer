@@ -21,7 +21,7 @@ public class ClasesProc {
     public int regresaCont(){
         try{
         objC.conectar();
-        String qry_cons="select count(idEnc) as cen from enc1;";
+        String qry_cons="select count(ta.id_uni) as cen from tb_unidades t, tb_a ta where t.id_uni = ta.id_uni;";
         ResultSet consulta = null;
                   consulta= objC.consulta(qry_cons);
                   if(consulta.next()){

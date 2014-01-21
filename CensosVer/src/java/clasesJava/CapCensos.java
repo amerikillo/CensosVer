@@ -16,11 +16,11 @@ public class CapCensos {
 
     ConectionDB con = new ConectionDB();
 
-    public void Captura(String id_uni, String tipo, String gnombre_gnk, String juris, String fecha, String hora, String encuestador) throws SQLException {
+    public void Captura(String id_uni, String tipo, String gnombre_gnk, String juris, String fecha, String hora, String encuestador, String muni) throws SQLException {
         con.conectar();
         try {
             System.out.println("insert into tb_b (id_uni) values ('" + id_uni + "')");
-            con.insertar("insert into tb_a (id_uni, campo_5, campo_4, campo_18, campo_3, campo_1, campo_7) values('" + id_uni + "', '" + tipo + "', '" + gnombre_gnk + "', '" + juris + "', '" + fecha + " " + hora + "', '" + encuestador + "', '"+gnombre_gnk+"')");
+            con.insertar("insert into tb_a (id_uni, campo_5, campo_4, campo_18, campo_3, campo_1, campo_7, campo_10, campo_19, campo_11) values('" + id_uni + "', '" + tipo + "', '" + gnombre_gnk + "', '" + juris + "', '" + fecha + " " + hora + "', '" + encuestador + "', '"+gnombre_gnk+"', '"+muni+"', '"+muni+"', 'VERACRUZ')");
             con.insertar("insert into tb_b (id_uni) values ('" + id_uni + "')");
             con.insertar("insert into tb_c (id_uni) values ('" + id_uni + "')");
             con.insertar("insert into tb_d (id_uni) values ('" + id_uni + "')");

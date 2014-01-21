@@ -8,11 +8,12 @@
     session.getId();
     ConectionDB con = new ConectionDB();
 
-    id_uni = (String) sesion.getAttribute("id_uni");
     try {
-        con.conectar();
-        ResultSet rset = con.consulta("select * from tb_a as a, tb_b as b, tb_c as c, tb_d as d, tb_e as e, tb_f as f, tb_g as g, tb_unidades as clave where clave.id_uni=a.id_uni and clave.id_uni=b.id_uni and clave.id_uni=c.id_uni and clave.id_uni=d.id_uni and clave.id_uni=e.id_uni and clave.id_uni=f.id_uni and clave.id_uni=g.id_uni and clave.id_uni = '" + id_uni + "';");
-        while (rset.next()) {
+        id_uni = request.getParameter("id_uni");
+    } catch (Exception e) {
+        id_uni = "";
+    }
+
 %>
 
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -134,90 +135,103 @@
                 <td width="418">
                     <table width="1081" border="0">
                         <tr>
-                            <td colspan="12">
-                                <div class="panel panel-primary">
-                                    Bienvenido: <%=rset.getString("campo_1")%>
-                                    <!-- Default panel contents -->
-                                    <div class="panel-heading"><strong>LLENE LOS CAMPOS CON LAS RESPUESTAS OBTENIDAS</strong></div>
-                                </div>
-                            </td>
-                            <td  class="style43 style51">&nbsp;</td>
-                            <td colspan="3"  class="style58">
-                            </td>
+
+                            <form method="post">
+                                <td colspan="7"  class="style58">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h2>Seleccione la unidad a Modificar</h2>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-8">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><label class="glyphicon glyphicon-header"></label></span>
+                                                <select name="id_uni" id="id_yuni" class="form-control">
+                                                    <option>-- Seleccione Hospital --</option>
+                                                    <%                                                    con.conectar();
+                                                        ResultSet rset2 = con.consulta("select t.id_uni, t.nombre_gnk, t.juris from tb_unidades t, tb_a ta where t.id_uni = ta.id_uni order by id_uni asc");
+                                                        while (rset2.next()) {
+                                                            out.println("<option value = '" + rset2.getString("id_uni") + "'>" + rset2.getString("juris") + " - " + rset2.getString("nombre_gnk") + "</option>");
+                                                        }
+                                                        con.cierraConexion();
+                                                    %>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <button class="btn btn-primary btn-block">Ver</button>
+                                        </div>
+                                    </div>
+                                </td>
+                            </form>
                         </tr>
+                        <%
+                            try {
+                                con.conectar();
+                                ResultSet rset = con.consulta("select * from tb_a as a, tb_b as b, tb_c as c, tb_d as d, tb_e as e, tb_f as f, tb_g as g, tb_unidades as clave where clave.id_uni=a.id_uni and clave.id_uni=b.id_uni and clave.id_uni=c.id_uni and clave.id_uni=d.id_uni and clave.id_uni=e.id_uni and clave.id_uni=f.id_uni and clave.id_uni=g.id_uni and clave.id_uni = '" + id_uni + "';");
+                                while (rset.next()) {
+                        %>
                         <tr>
                             <td colspan="7"  class="style58">Estatus del Censo:<br/> 
                                 <%
-
                                     for (int i = 1; i <= 28; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección A incompleta - ");
                                             break;
                                         }
                                     }
 
                                 %>
-                                <%
-
-                                    for (int i = 29; i <= 33; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                <%                                    for (int i = 29; i <= 33; i++) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección B incompleta - ");
                                             break;
                                         }
                                     }
 
                                 %>
-                                <%
-
-                                    for (int i = 34; i <= 40; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                <%                                    for (int i = 34; i <= 40; i++) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección C incompleta - ");
                                             break;
                                         }
                                     }
 
                                 %>
-                                <%
-
-                                    for (int i = 41; i <= 43; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                <%                                    for (int i = 41; i <= 43; i++) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección D incompleta - ");
                                             break;
                                         }
                                     }
 
                                 %>
-                                <%
-
-                                    for (int i = 44; i <= 96; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                <%                                    for (int i = 44; i <= 96; i++) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección E incompleta - ");
                                             break;
                                         }
                                     }
 
                                 %>
-                                <%
-
-                                    for (int i = 97; i <= 150; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                <%                                    for (int i = 97; i <= 150; i++) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección F incompleta - ");
                                             break;
                                         }
                                     }
 
                                 %>
-                                <%
-
-                                    for (int i = 151; i <= 151; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                <%                                    for (int i = 151; i <= 151; i++) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección G incompleta");
                                             break;
                                         }
                                     }
 
                                 %>
-                                </tr>
+                        </tr>
                         <tr>
                             <td colspan="7"  class="style43 style51"><hr /></td>
                         </tr>
@@ -237,7 +251,8 @@
                             <td colspan="3"  class="style58">Hecho por: 
                                 <input name="txtf_elab" id="txtf_elab" type="text" class="form-control neg" onkeypress="return handleEnter(this, event);" size="40" value="GNK Log&iacute;stica S.A. de C.V." /></td>
                         </tr>
-                        <form  method="post" name="form_a" id="form_a" class="form-horizontal" action="GuardaSeccion" >
+                        <form  method="post" name="form_a" id="form_a" class="form-horizontal" action="ModificaSeccion" >
+                            <input name="id_uni" id="id_uni" value="<%=id_uni%>" style="display:none" />
                             <tr>
                                 <td colspan="3" class="style58">
                                     <div class="panel panel-primary">

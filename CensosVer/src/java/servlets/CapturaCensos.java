@@ -86,12 +86,17 @@ public class CapturaCensos extends HttpServlet {
         //processRequest(request, response);
         if (request.getParameter("envio").equals("1")) {
             try {
-                captura.Captura(request.getParameter("id_uni"), request.getParameter("tipo"), request.getParameter("nombre_gnk"), request.getParameter("juris"), request.getParameter("fecha"), request.getParameter("hora"), request.getParameter("encuestador"));
+                captura.Captura(request.getParameter("id_uni"), request.getParameter("tipo"), request.getParameter("nombre_gnk"), request.getParameter("juris"), request.getParameter("fecha"), request.getParameter("hora"), request.getParameter("encuestador"), request.getParameter("muni"));
             } catch (SQLException ex) {
                 Logger.getLogger(CapturaCensos.class.getName()).log(Level.SEVERE, null, ex);
             }
             sesion.setAttribute("id_uni", request.getParameter("id_uni"));
             response.sendRedirect("capturaCensosH.jsp");
+        }
+        
+        if (request.getParameter("envio").equals("2")) {
+            sesion.setAttribute("id_uni", request.getParameter("id_uni"));
+            response.sendRedirect("cargaFotosCensos.jsp");
         }
     }
 

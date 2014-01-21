@@ -118,7 +118,7 @@
                     <li class="active"><a href="/CensosVer/login?ban=2">Men&uacute;</a></li>
                     <li><a data-toggle="modal" href="#myModal2">Instrucciones</a></li>
                     <li><a data-toggle="modal" href="#myModal">Sistemas</a></li>
-                    <li><a data-toggle="modal" href="/CensosVer/login?ban=3">Salir</a></li>
+                    <li><a data-toggle="modal" href="index.jsp">Salir</a></li>
                 </ul>
                 <!--div class="bs-example">
                                     <p class="popover-examples">
@@ -144,7 +144,7 @@
                         </tr>
 
                         <tr>
-                            <form>
+                            <form method="post">
                                 <td colspan="7"  class="style58">
                                     <div class="row">
                                         <div class="col-md-8">
@@ -1746,14 +1746,14 @@
                                                                                                //Parameter("ima");
                                             %>
                                             <div class="carousel-inner" align="center" >
-                                                <div class="item active"><img src="imagenes/inicio2.png" width="500" id="imagen" /></div>
+                                                <div class="item active"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_1.JPG" width="500" id="imagen" /></div>
 
-                                                <div class="item"><img src="imagenes/inicio2.png" width="500" id="imagen2" /></div>
-                                                <div class="item"><img src="imagenes/inicio2.png" width="500" id="imagen3" /></div>
-                                                <div class="item"><img src="imagenes/inicio2.png" width="500" id="imagen4" /></div>
-                                                <div class="item"><img src="imagenes/inicio2.png" width="500" id="imagen5" /></div>
-                                                <div class="item"><img src="imagenes/inicio2.png" width="500" id="imagen6" /></div>
-                                                <div class="item"><img src="imagenes/inicio2.png" width="500" id="imagen7" /></div>
+                                                <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_2.JPG" width="500" id="imagen2" /></div>
+                                                <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_3.JPG" width="500" id="imagen3" /></div>
+                                                <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_4.JPG" width="500" id="imagen4" /></div>
+                                                <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_5.JPG" width="500" id="imagen5" /></div>
+                                                <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_6.JPG" width="500" id="imagen6" /></div>
+                                                <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_7.JPG" width="500" id="imagen7" /></div>
 
                                             </div>
 
@@ -1769,7 +1769,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="7" class="style47"><strong class="neg">DERECHOS RESERVADOS GNKL/DESARROLLOS WEB &reg; 2009 - 2013</strong></td>
+                            <td colspan="7" class="style47"><strong class="neg">DERECHOS RESERVADOS GNKL/DESARROLLOS WEB &reg; 2009 - 2014</strong></td>
                         </tr>
                     </table>
                 </td>
