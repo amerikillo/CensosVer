@@ -19,7 +19,7 @@ function CloseWin() {
 function fillCategory_Juris() {
 //alert("que pacho");
     // this function is used to fill the category list on load
-    addOption(document.form.Category, "JURISDICCION SANITARIA Iss", "JURISDICCION SANITARIA Iss");
+    addOption(document.form.Category, "JURISDICCION SANITARIA I", "JURISDICCION SANITARIA Iss");
     addOption(document.form.Category, "JURISDICCION SANITARIA II", "JURISDICCION SANITARIA II");
     addOption(document.form.Category, "JURISDICCION SANITARIA III", "JURISDICCION SANITARIA III");
 //document.form.txtf_ref.focus();
