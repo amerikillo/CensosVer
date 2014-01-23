@@ -1737,24 +1737,28 @@
                                                 <li data-target="#myCarousel" data-slide-to="4"></li>
                                                 <li data-target="#myCarousel" data-slide-to="5"></li>
                                                 <li data-target="#myCarousel" data-slide-to="6"></li>
+                                                <li data-target="#myCarousel" data-slide-to="7"></li>
+                                                <li data-target="#myCarousel" data-slide-to="8"></li>
+                                                <li data-target="#myCarousel" data-slide-to="9"></li>
+                                                <li data-target="#myCarousel" data-slide-to="10"></li>
+                                                <li data-target="#myCarousel" data-slide-to="11"></li>
                                             </ol>
                                             <!-- Carousel items -->
 
-                                            <%
-// int ima=Integer.parseI                                                                                       %><%
-                                                                                               //out.print(""+ima);
-                                                                                               //Parameter("ima");
-                                            %>
+                                            
                                             <div class="carousel-inner" align="center" >
                                                 <div class="item active"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_1.JPG" width="500" id="imagen" /></div>
-
                                                 <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_2.JPG" width="500" id="imagen2" /></div>
                                                 <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_3.JPG" width="500" id="imagen3" /></div>
                                                 <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_4.JPG" width="500" id="imagen4" /></div>
                                                 <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_5.JPG" width="500" id="imagen5" /></div>
                                                 <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_6.JPG" width="500" id="imagen6" /></div>
                                                 <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_7.JPG" width="500" id="imagen7" /></div>
-
+                                                <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_8.JPG" width="500" id="imagen7" /></div>
+                                                <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_9.JPG" width="500" id="imagen7" /></div>
+                                                <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_10.JPG" width="500" id="imagen7" /></div>
+                                                <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_11.JPG" width="500" id="imagen7" /></div>
+                                                <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_12.JPG" width="500" id="imagen7" /></div>
                                             </div>
 
                                             <!-- Carousel nav -->

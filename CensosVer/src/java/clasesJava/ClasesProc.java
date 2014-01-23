@@ -18,22 +18,22 @@ public class ClasesProc {
     ConectionDB objC= new ConectionDB();
     
     
-    public int regresaCont(){
-        try{
-        objC.conectar();
-        String qry_cons="select count(ta.id_uni) as cen from tb_unidades t, tb_a ta where t.id_uni = ta.id_uni;";
-        ResultSet consulta = null;
-                  consulta= objC.consulta(qry_cons);
-                  if(consulta.next()){
-                      exito=true;
-                      censos=consulta.getInt("cen");
-                      
-                  }
-              objC.cierraConexion();
-         }catch(SQLException ex){
-               this.SQLEx = "Se produjo una excepción durante la conexión: "+ ex.toString();
-        
-    }
+    public int regresaCont() {
+        try {
+            objC.conectar();
+            String qry_cons = "select count(ta.id_uni) as cen from tb_unidades t, tb_a ta where t.id_uni = ta.id_uni;";
+            ResultSet consulta = null;
+            consulta = objC.consulta(qry_cons);
+            if (consulta.next()) {
+                exito = true;
+                censos = consulta.getInt("cen");
+
+            }
+            objC.cierraConexion();
+        } catch (SQLException ex) {
+            this.SQLEx = "Se produjo una excepción durante la conexión: " + ex.toString();
+
+        }
     return censos;
   }
 
