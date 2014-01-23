@@ -25,7 +25,7 @@
         <script language="javascript" src="js/bootstrap-button.js"></script>
         <script src="jquery/jquery.js" type="text/javascript"></script>
         <!-- Copyright 2005 Macromedia, Inc. All rights reserved. -->
-        <title>:: CAPTURA DE CENSOS ::</title>
+        <title>:: CONSULTA DE CENSOS ::</title>
         <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
         <!-- Bootstrap core CSS -->
         <link href="css/bootstrap.css" rel="stylesheet" />
@@ -127,7 +127,7 @@
                                         </a>
                                     </p>
                             </div-->
-                <h3 class="text-primary"><a name="top" id="top"></a>Captura de Censos Hospitales</h3>
+                <h3 class="text-primary"><a name="top" id="top"></a>Consulta de Censos Hospitales</h3>
             </div>
         </div>
 
@@ -214,7 +214,7 @@
                                 int contCam = 0;
                                 //nombreC=nomCam+(contCam+=1);
                                 //out.print(nombreC);
-                            %>
+%>
                             <tr>
                                 <td width="29" class="style58"><div align="center">A.1</div></td>
                                 <td width="189" class="style58">Elaborado por </td>
@@ -228,7 +228,7 @@
                                 <td bgcolor="#FFFFFF" class="style58">A.2</td>
                                 <%
                                     //int contCam=79;
-                                %>
+%>
                                 <td class="style58"><div align="left">Nombre del Encuestado</div></td>
                                 <td>             
                                     <label>
@@ -362,7 +362,7 @@
                                 <td class="style58">&nbsp;Poblaci&oacute;n Atendida</td>
                                 <td class="style33"><strong>
                                         <label>
-                                            
+
                                             <%//=nombreC=nomCam+(contCam+=1)%>
                                             <textarea name="<%=nombreC = nomCam + (contCam += 1)%>" id="<%=nombreC%>"cols="40" class="form-control" id="campo_10" onkeypress="return handleEnter(this, event);" readonly ><%=rset.getString(nombreC)%></textarea>
 
@@ -1745,7 +1745,7 @@
                                             </ol>
                                             <!-- Carousel items -->
 
-                                            
+
                                             <div class="carousel-inner" align="center" >
                                                 <div class="item active"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_1.JPG" width="500" id="imagen" /></div>
                                                 <div class="item"><img src="imagenes/<%=id_uni%>/<%=id_uni%>_2.JPG" width="500" id="imagen2" /></div>
@@ -1797,13 +1797,10 @@
                         <h4 class="modal-title">INSTRUCCIONES DE LLENADO</h4>
                     </div>
                     <div class="modal-body">
-                        <img src="imagenes/GNKL_Small.JPG" />Previamente debes de checar que haya conexi&oacute;n a Internet<br/>
-                        <ul>
-                            <li>Ingresa la respuesta del Encuestado en cada uno de sus campos</li>
-                            <li>TODOS los campos deben de ser llenados con su respuesta correspondiente</li>
-                            <li>No se permiten campos vac&iacute;os, en caso de que no haya respuesta v&aacute;lida, poner NA</li>
-                            <li>Por cada Secci&oacute;n de la Encuesta se debe de ir Guardando dando clic en el Bot&oacute;n de GUARDAR</li>
-                        </ul>
+                        <img src="imagenes/GNKL_Small.JPG" />Previamente debes de checar que haya conexi&oacute;n a Internet<br>
+                            <ul>
+                                <li>Seleccione la Unidad a consultar, y a continuación de clic en el boton "Ver"</li>
+                            </ul>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
