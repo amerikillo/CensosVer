@@ -115,7 +115,7 @@
         <div class="container">
             <div class="header">
                 <ul class="nav nav-pills pull-right">
-                    <li class="active"><a href="/CensosVer/login?ban=2">Men&uacute;</a></li>
+                    <li class="active"><a href="indexMain.jsp">Men&uacute;</a></li>
                     <li><a data-toggle="modal" href="#myModal2">Instrucciones</a></li>
                     <li><a data-toggle="modal" href="#myModal">Sistemas</a></li>
                     <li><a data-toggle="modal" href="index.jsp">Salir</a></li>

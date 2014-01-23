@@ -11,7 +11,7 @@
  Target Server Version : 50615
  File Encoding         : utf-8
 
- Date: 01/16/2014 16:15:08 PM
+ Date: 01/23/2014 17:33:23 PM
 */
 
 SET NAMES utf8;
@@ -403,13 +403,13 @@ CREATE TABLE `entradas` (
 	`hora` time NOT NULL,
 	`status` int(10) NOT NULL,
 	PRIMARY KEY (`id`)
-) ENGINE=`InnoDB` AUTO_INCREMENT=49 DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
+) ENGINE=`InnoDB` AUTO_INCREMENT=69 DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
 
 -- ----------------------------
 --  Records of `entradas`
 -- ----------------------------
 BEGIN;
-INSERT INTO `entradas` VALUES ('1', 'ricardo', '2013-11-06', '00:00:00', '0'), ('2', 'r', '2013-11-07', '01:30:14', '0'), ('3', 'ricardo', '2013-11-07', '01:30:21', '1'), ('4', '', '2013-11-07', '01:33:30', '0'), ('5', 'ricardo', '2013-11-07', '01:33:37', '1'), ('6', 'ricardo', '2013-11-07', '02:55:07', '1'), ('7', 'ricardo', '2013-11-07', '03:08:20', '1'), ('8', '', '2013-11-07', '05:05:12', '0'), ('9', 'ricardo', '2013-11-07', '05:05:19', '1'), ('10', '', '2013-11-08', '10:44:55', '0'), ('11', 'ricardo', '2013-11-08', '10:45:04', '1'), ('12', 'ricardo', '2013-11-08', '12:38:49', '1'), ('13', 'ricardo', '2013-11-08', '12:57:42', '1'), ('14', 'ricardo', '2013-11-08', '12:58:14', '1'), ('15', 'ricardo', '2013-11-08', '03:54:35', '1'), ('16', '', '2013-11-14', '10:00:16', '0'), ('17', 'sistemas', '2013-11-14', '10:00:24', '1'), ('18', 'sistemas', '2013-11-14', '10:35:40', '1'), ('19', 'sistemas', '2013-11-14', '10:51:46', '1'), ('20', '', '2013-11-14', '10:52:30', '0'), ('21', 'sistemas', '2013-11-14', '10:52:36', '1'), ('22', 'sistemas', '2013-11-14', '10:59:09', '0'), ('23', 'sistemas', '2013-11-14', '10:59:16', '1'), ('24', 'sistemas', '2013-11-14', '11:08:48', '1'), ('25', 'ricardo', '2013-11-14', '02:12:43', '1'), ('26', 'ricardo', '2013-11-14', '06:01:16', '1'), ('27', 'ricardo', '2013-11-14', '10:37:43', '1'), ('28', 'ricardo', '2013-11-14', '11:24:39', '1'), ('29', 'ricardo', '2013-11-15', '03:52:04', '1'), ('30', 'ricardo', '2013-11-15', '08:28:22', '1'), ('31', 'ricardo', '2013-11-15', '08:42:51', '1'), ('32', 'ricardo', '2013-11-16', '01:13:39', '1'), ('33', 'ricardo', '2014-01-09', '05:40:47', '1'), ('34', 'ricardo', '2014-01-09', '05:41:51', '1'), ('35', 'ricardo', '2014-01-09', '05:49:48', '1'), ('36', 'ricardo', '2014-01-09', '05:55:52', '1'), ('37', 'ricardo', '2014-01-10', '10:37:38', '1'), ('38', 'ricardo', '2014-01-10', '10:54:06', '1'), ('39', '', '2014-01-10', '11:55:53', '0'), ('40', 'ricardo', '2014-01-10', '11:57:14', '1'), ('41', 'ricardo', '2014-01-11', '12:53:48', '1'), ('42', 'ricardo', '2014-01-11', '09:13:39', '1'), ('43', 'ricardo', '2014-01-16', '01:35:40', '1'), ('44', 'ricardo', '2014-01-16', '02:01:43', '1'), ('45', 'ricardo', '2014-01-16', '03:24:16', '1'), ('46', 'ricardo', '2014-01-16', '03:37:00', '1'), ('47', 'RICARDO', '2014-01-16', '03:46:34', '1'), ('48', 'ricardo', '2014-01-16', '03:47:31', '1');
+INSERT INTO `entradas` VALUES ('1', 'ricardo', '2013-11-06', '00:00:00', '0'), ('2', 'r', '2013-11-07', '01:30:14', '0'), ('3', 'ricardo', '2013-11-07', '01:30:21', '1'), ('4', '', '2013-11-07', '01:33:30', '0'), ('5', 'ricardo', '2013-11-07', '01:33:37', '1'), ('6', 'ricardo', '2013-11-07', '02:55:07', '1'), ('7', 'ricardo', '2013-11-07', '03:08:20', '1'), ('8', '', '2013-11-07', '05:05:12', '0'), ('9', 'ricardo', '2013-11-07', '05:05:19', '1'), ('10', '', '2013-11-08', '10:44:55', '0'), ('11', 'ricardo', '2013-11-08', '10:45:04', '1'), ('12', 'ricardo', '2013-11-08', '12:38:49', '1'), ('13', 'ricardo', '2013-11-08', '12:57:42', '1'), ('14', 'ricardo', '2013-11-08', '12:58:14', '1'), ('15', 'ricardo', '2013-11-08', '03:54:35', '1'), ('16', '', '2013-11-14', '10:00:16', '0'), ('17', 'sistemas', '2013-11-14', '10:00:24', '1'), ('18', 'sistemas', '2013-11-14', '10:35:40', '1'), ('19', 'sistemas', '2013-11-14', '10:51:46', '1'), ('20', '', '2013-11-14', '10:52:30', '0'), ('21', 'sistemas', '2013-11-14', '10:52:36', '1'), ('22', 'sistemas', '2013-11-14', '10:59:09', '0'), ('23', 'sistemas', '2013-11-14', '10:59:16', '1'), ('24', 'sistemas', '2013-11-14', '11:08:48', '1'), ('25', 'ricardo', '2013-11-14', '02:12:43', '1'), ('26', 'ricardo', '2013-11-14', '06:01:16', '1'), ('27', 'ricardo', '2013-11-14', '10:37:43', '1'), ('28', 'ricardo', '2013-11-14', '11:24:39', '1'), ('29', 'ricardo', '2013-11-15', '03:52:04', '1'), ('30', 'ricardo', '2013-11-15', '08:28:22', '1'), ('31', 'ricardo', '2013-11-15', '08:42:51', '1'), ('32', 'ricardo', '2013-11-16', '01:13:39', '1'), ('33', 'ricardo', '2014-01-09', '05:40:47', '1'), ('34', 'ricardo', '2014-01-09', '05:41:51', '1'), ('35', 'ricardo', '2014-01-09', '05:49:48', '1'), ('36', 'ricardo', '2014-01-09', '05:55:52', '1'), ('37', 'ricardo', '2014-01-10', '10:37:38', '1'), ('38', 'ricardo', '2014-01-10', '10:54:06', '1'), ('39', '', '2014-01-10', '11:55:53', '0'), ('40', 'ricardo', '2014-01-10', '11:57:14', '1'), ('41', 'ricardo', '2014-01-11', '12:53:48', '1'), ('42', 'ricardo', '2014-01-11', '09:13:39', '1'), ('43', 'ricardo', '2014-01-16', '01:35:40', '1'), ('44', 'ricardo', '2014-01-16', '02:01:43', '1'), ('45', 'ricardo', '2014-01-16', '03:24:16', '1'), ('46', 'ricardo', '2014-01-16', '03:37:00', '1'), ('47', 'RICARDO', '2014-01-16', '03:46:34', '1'), ('48', 'ricardo', '2014-01-16', '03:47:31', '1'), ('49', 'ricardo', '2014-01-17', '10:33:39', '1'), ('50', 'ricardo', '2014-01-17', '10:37:09', '1'), ('51', 'ricardo', '2014-01-17', '10:38:12', '1'), ('52', 'ricardo', '2014-01-17', '03:25:56', '1'), ('53', 'ricardo', '2014-01-20', '11:06:10', '1'), ('54', 'ricardo', '2014-01-20', '11:20:35', '1'), ('55', 'ricardo', '2014-01-21', '08:29:57', '1'), ('56', 'ricardo', '2014-01-21', '08:30:36', '1'), ('57', 'ricardo', '2014-01-21', '12:17:46', '1'), ('58', 'ricado', '2014-01-21', '12:20:01', '0'), ('59', 'ricardo', '2014-01-21', '12:32:24', '1'), ('60', 'ricardo', '2014-01-21', '12:33:41', '1'), ('61', 'admin', '2014-01-21', '12:40:53', '0'), ('62', 'ricardo', '2014-01-21', '12:41:00', '1'), ('63', 'ricardo', '2014-01-21', '12:42:24', '1'), ('64', 'ricardo', '2014-01-21', '12:42:38', '1'), ('65', 'ricardo', '2014-01-21', '12:45:21', '1'), ('66', 'ricardo', '2014-01-21', '03:44:53', '1'), ('67', 'ricardo', '2014-01-21', '03:47:37', '1'), ('68', 'ricardo', '2014-01-23', '02:33:17', '1');
 COMMIT;
 
 -- ----------------------------
@@ -418,34 +418,34 @@ COMMIT;
 DROP TABLE IF EXISTS `tb_a`;
 CREATE TABLE `tb_a` (
 	`id_uni` varchar(10) NOT NULL,
-	`campo_1` varchar(100) NOT NULL DEFAULT '',
-	`campo_2` varchar(100) NOT NULL DEFAULT '',
-	`campo_3` varchar(100) NOT NULL DEFAULT '',
+	`campo_1` varchar(50) NOT NULL DEFAULT '',
+	`campo_2` varchar(50) NOT NULL DEFAULT '',
+	`campo_3` varchar(30) NOT NULL DEFAULT '',
 	`campo_4` varchar(100) NOT NULL DEFAULT '',
-	`campo_5` varchar(100) NOT NULL DEFAULT '',
-	`campo_6` varchar(100) NOT NULL DEFAULT '',
-	`campo_7` varchar(100) NOT NULL DEFAULT '',
-	`campo_8` varchar(100) NOT NULL DEFAULT '',
-	`campo_9` varchar(100) NOT NULL DEFAULT '',
-	`campo_10` varchar(100) NOT NULL DEFAULT '',
-	`campo_11` varchar(100) NOT NULL DEFAULT '',
-	`campo_12` varchar(100) NOT NULL DEFAULT '',
-	`campo_13` varchar(100) NOT NULL DEFAULT '',
+	`campo_5` varchar(50) NOT NULL DEFAULT '',
+	`campo_6` varchar(60) NOT NULL DEFAULT '',
+	`campo_7` varchar(255) NOT NULL DEFAULT '',
+	`campo_8` varchar(30) NOT NULL DEFAULT '',
+	`campo_9` varchar(30) NOT NULL DEFAULT '',
+	`campo_10` varchar(30) NOT NULL DEFAULT '',
+	`campo_11` varchar(20) NOT NULL DEFAULT '',
+	`campo_12` varchar(6) NOT NULL DEFAULT '',
+	`campo_13` varchar(10) NOT NULL DEFAULT '',
 	`campo_14` varchar(100) NOT NULL DEFAULT '',
 	`campo_15` varchar(100) NOT NULL DEFAULT '',
-	`campo_16` varchar(100) NOT NULL DEFAULT '',
-	`campo_17` varchar(100) NOT NULL DEFAULT '',
-	`campo_18` varchar(100) NOT NULL DEFAULT '',
-	`campo_19` varchar(100) NOT NULL DEFAULT '',
-	`campo_20` varchar(100) NOT NULL DEFAULT '',
-	`campo_21` varchar(100) NOT NULL DEFAULT '',
-	`campo_22` varchar(100) NOT NULL DEFAULT '',
-	`campo_23` varchar(100) NOT NULL DEFAULT '',
-	`campo_24` varchar(100) NOT NULL DEFAULT '',
-	`campo_25` varchar(100) NOT NULL DEFAULT '',
-	`campo_26` varchar(100) NOT NULL DEFAULT '',
-	`campo_27` varchar(100) NOT NULL DEFAULT '',
-	`campo_28` varchar(100) NOT NULL DEFAULT '',
+	`campo_16` varchar(30) NOT NULL DEFAULT '',
+	`campo_17` varchar(50) NOT NULL DEFAULT '',
+	`campo_18` varchar(50) NOT NULL DEFAULT '',
+	`campo_19` varchar(30) NOT NULL DEFAULT '',
+	`campo_20` varchar(5) NOT NULL DEFAULT '',
+	`campo_21` varchar(5) NOT NULL DEFAULT '',
+	`campo_22` varchar(5) NOT NULL DEFAULT '',
+	`campo_23` varchar(50) NOT NULL DEFAULT '',
+	`campo_24` varchar(30) NOT NULL DEFAULT '',
+	`campo_25` varchar(30) NOT NULL DEFAULT '',
+	`campo_26` varchar(50) NOT NULL DEFAULT '',
+	`campo_27` varchar(30) NOT NULL DEFAULT '',
+	`campo_28` varchar(50) NOT NULL DEFAULT '',
 	PRIMARY KEY (`id_uni`),
 	CONSTRAINT `tb_a_ibfk_1` FOREIGN KEY (`id_uni`) REFERENCES `tb_unidades` (`id_uni`)   ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
@@ -454,7 +454,7 @@ CREATE TABLE `tb_a` (
 --  Records of `tb_a`
 -- ----------------------------
 BEGIN;
-INSERT INTO `tb_a` VALUES ('2003', 'Encuestador 1', '', '16/01/2014 15:02:18', 'HG NARANJOS (NUEVO)', 'Â HOSPITAL GENERAL', '', 'HG NARANJOS (NUEVO)', '', '', '', '', '', '', '', '', '', '', 'J.S. 2 TUXPAM', '', '', '', '', '', '', '', '', '', ''), ('5006', 'Encuestador 1', 'ASTORGA', '16/01/2014 15:47:59', 'HI TEOCELO', 'Â HOSPITAL INTEGRAL (COMUNITARIO)', 'DIRACCION 1', 'HI TEOCELO', 'COLONIA', 'CIUDAD', 'MUNICIPIO', 'ESTADO', 'CP', 'MAPA', 'TELEFONO', 'FAX', 'A.COM', '1,001 A 2,500 HABITANTES', 'J.S. 5 XALAPA', 'COORDINACION', '20', '5', '3', 'ADMINISTRADOR', '2233114', 'C.BO.COM', 'DOTMAP', '2233445', 'C.OM'), ('6003', 'Encuestador 3', '', '16/01/2014 13:27:59', 'HI TEZONAPA', 'Â HOSPITAL INTEGRAL (COMUNITARIO)', '', 'HI TEZONAPA', '', '', '', '', '', '', '', '', '', '', 'J.S. 6 CORDOBA', '', '', '', '', '', '', '', '', '', '');
+INSERT INTO `tb_a` VALUES ('1001', 'ENCUESTADOR 1', 'ANIBAL', '23/01/2014 17:12:17', 'HI OZULUAMA DE MASCARENAS', 'HOSPITAL INTEGRAL (COMUNITARIO)', 'DIRECCIÓN DE ANIBAL', 'HI OZULUAMA DE MASCARENAS', 'COLONIA', 'TOLUCA', 'OZULUAMA DE MASCARENAS', 'VERACRUZ', '23445', '12D', '129483912', '129483912', 'PAGINA.COM', '501 A 1,000 HABITANTES', 'J.S. 1 PANUCO', 'OZULUAMA DE MASCARENAS', '5', '12', '3', 'NOMBRE DEL ADMINISTRADOR', '219038309', 'CORREO.COM@CORREO', 'NOMBRE DEL DIRECTOR', '1092731029', 'CORREO.COM@CORREO'), ('1002', 'Encuestador 1', '', '23/01/2014 16:10:04', 'HG PANUCO (DR. MANUEL I. AVILA)', 'HOSPITAL GENERAL', '', 'HG PANUCO (DR. MANUEL I. AVILA)', '', '', 'PANUCO', 'VERACRUZ', '', '', '', '', '', '', 'J.S. 1 PANUCO', 'PANUCO', '', '', '', '', '', '', '', '', ''), ('8005', 'Encuestador 1', '', '23/01/2014 16:10:18', 'HG CARDEL', 'HOSPITAL GENERAL', '', 'HG CARDEL', '', '', 'LA ANTIGUA', 'VERACRUZ', '', '', '', '', '', '', 'J.S. 8 VERACRUZ', 'LA ANTIGUA', '', '', '', '', '', '', '', '', '');
 COMMIT;
 
 -- ----------------------------
@@ -463,21 +463,14 @@ COMMIT;
 DROP TABLE IF EXISTS `tb_b`;
 CREATE TABLE `tb_b` (
 	`id_uni` varchar(10) NOT NULL,
-	`campo_29` varchar(100) DEFAULT '',
-	`campo_30` varchar(100) DEFAULT '',
-	`campo_31` varchar(100) DEFAULT '',
-	`campo_32` varchar(100) DEFAULT '',
-	`campo_33` varchar(100) DEFAULT '',
+	`campo_29` varchar(5) DEFAULT '',
+	`campo_30` varchar(5) DEFAULT '',
+	`campo_31` varchar(5) DEFAULT '',
+	`campo_32` varchar(5) DEFAULT '',
+	`campo_33` varchar(5) DEFAULT '',
 	PRIMARY KEY (`id_uni`),
 	CONSTRAINT `tb_b_ibfk_1` FOREIGN KEY (`id_uni`) REFERENCES `tb_unidades` (`id_uni`)   ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
-
--- ----------------------------
---  Records of `tb_b`
--- ----------------------------
-BEGIN;
-INSERT INTO `tb_b` VALUES ('1002', '', '', '', '', ''), ('2003', '', '', '', '', ''), ('3003', '', '', '', '', ''), ('5006', '5', '5', '40', '20', '12'), ('6003', '8', '3', '35', '40', '12');
-COMMIT;
 
 -- ----------------------------
 --  Table structure for `tb_c`
@@ -485,23 +478,16 @@ COMMIT;
 DROP TABLE IF EXISTS `tb_c`;
 CREATE TABLE `tb_c` (
 	`id_uni` varchar(10) NOT NULL,
-	`campo_34` varchar(100) DEFAULT '',
-	`campo_35` varchar(100) DEFAULT '',
+	`campo_34` varchar(5) DEFAULT '',
+	`campo_35` varchar(255) DEFAULT '',
 	`campo_36` varchar(100) DEFAULT '',
+	`campo_38` varchar(50) DEFAULT '',
 	`campo_37` varchar(100) DEFAULT '',
-	`campo_38` varchar(100) DEFAULT '',
-	`campo_39` varchar(100) DEFAULT '',
+	`campo_39` varchar(5) DEFAULT '',
 	`campo_40` varchar(100) DEFAULT '',
 	PRIMARY KEY (`id_uni`),
 	CONSTRAINT `tb_c_ibfk_1` FOREIGN KEY (`id_uni`) REFERENCES `tb_unidades` (`id_uni`)   ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
-
--- ----------------------------
---  Records of `tb_c`
--- ----------------------------
-BEGIN;
-INSERT INTO `tb_c` VALUES ('1002', '', '', '', '', '', '', ''), ('2003', '', '', '', '', '', '', ''), ('3003', '', '', '', '', '', '', ''), ('5006', 'si', 'todos', 'chido', 'todos', 'POR DOSIS', 'SI', 'IGUAL'), ('6003', '', '', '', '', '', '', '');
-COMMIT;
 
 -- ----------------------------
 --  Table structure for `tb_d`
@@ -509,19 +495,12 @@ COMMIT;
 DROP TABLE IF EXISTS `tb_d`;
 CREATE TABLE `tb_d` (
 	`id_uni` varchar(10) NOT NULL,
-	`campo_41` varchar(100) DEFAULT '',
-	`campo_42` varchar(100) DEFAULT '',
+	`campo_41` varchar(5) DEFAULT '',
+	`campo_42` varchar(255) DEFAULT '',
 	`campo_43` varchar(100) DEFAULT '',
 	PRIMARY KEY (`id_uni`),
 	CONSTRAINT `tb_d_ibfk_1` FOREIGN KEY (`id_uni`) REFERENCES `tb_unidades` (`id_uni`)   ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
-
--- ----------------------------
---  Records of `tb_d`
--- ----------------------------
-BEGIN;
-INSERT INTO `tb_d` VALUES ('1002', '', '', ''), ('2003', '', '', ''), ('3003', '', '', ''), ('5006', 'SI', 'TODOS', 'FACIL'), ('6003', '', '', '');
-COMMIT;
 
 -- ----------------------------
 --  Table structure for `tb_e`
@@ -529,69 +508,62 @@ COMMIT;
 DROP TABLE IF EXISTS `tb_e`;
 CREATE TABLE `tb_e` (
 	`id_uni` varchar(10) NOT NULL,
-	`campo_44` varchar(100) NOT NULL DEFAULT '',
-	`campo_45` varchar(100) NOT NULL DEFAULT '',
-	`campo_46` varchar(100) NOT NULL DEFAULT '',
-	`campo_47` varchar(100) NOT NULL DEFAULT '',
-	`campo_48` varchar(100) NOT NULL DEFAULT '',
-	`campo_49` varchar(100) NOT NULL DEFAULT '',
-	`campo_50` varchar(100) NOT NULL DEFAULT '',
-	`campo_51` varchar(100) NOT NULL DEFAULT '',
-	`campo_52` varchar(100) NOT NULL DEFAULT '',
-	`campo_53` varchar(100) NOT NULL DEFAULT '',
-	`campo_54` varchar(100) NOT NULL DEFAULT '',
-	`campo_55` varchar(100) NOT NULL DEFAULT '',
-	`campo_56` varchar(100) NOT NULL DEFAULT '',
-	`campo_57` varchar(100) NOT NULL DEFAULT '',
-	`campo_58` varchar(100) NOT NULL DEFAULT '',
-	`campo_59` varchar(100) NOT NULL DEFAULT '',
-	`campo_60` varchar(100) NOT NULL DEFAULT '',
-	`campo_61` varchar(100) NOT NULL DEFAULT '',
-	`campo_62` varchar(100) NOT NULL DEFAULT '',
-	`campo_63` varchar(100) NOT NULL DEFAULT '',
-	`campo_64` varchar(100) NOT NULL DEFAULT '',
-	`campo_65` varchar(100) NOT NULL DEFAULT '',
-	`campo_66` varchar(100) NOT NULL DEFAULT '',
-	`campo_67` varchar(100) NOT NULL DEFAULT '',
-	`campo_68` varchar(100) NOT NULL DEFAULT '',
-	`campo_69` varchar(100) NOT NULL DEFAULT '',
-	`campo_70` varchar(100) NOT NULL DEFAULT '',
-	`campo_71` varchar(100) NOT NULL DEFAULT '',
-	`campo_72` varchar(100) NOT NULL DEFAULT '',
-	`campo_73` varchar(100) NOT NULL DEFAULT '',
-	`campo_74` varchar(100) NOT NULL DEFAULT '',
+	`campo_44` varchar(5) NOT NULL DEFAULT '',
+	`campo_45` varchar(30) NOT NULL DEFAULT '',
+	`campo_46` varchar(30) NOT NULL DEFAULT '',
+	`campo_47` varchar(5) NOT NULL DEFAULT '',
+	`campo_48` varchar(5) NOT NULL DEFAULT '',
+	`campo_49` varchar(5) NOT NULL DEFAULT '',
+	`campo_50` varchar(5) NOT NULL DEFAULT '',
+	`campo_51` varchar(5) NOT NULL DEFAULT '',
+	`campo_52` varchar(5) NOT NULL DEFAULT '',
+	`campo_53` varchar(5) NOT NULL DEFAULT '',
+	`campo_54` varchar(30) NOT NULL DEFAULT '',
+	`campo_55` varchar(30) NOT NULL DEFAULT '',
+	`campo_56` varchar(30) NOT NULL DEFAULT '',
+	`campo_57` varchar(30) NOT NULL DEFAULT '',
+	`campo_58` varchar(30) NOT NULL DEFAULT '',
+	`campo_59` varchar(30) NOT NULL DEFAULT '',
+	`campo_60` varchar(30) NOT NULL DEFAULT '',
+	`campo_61` varchar(30) NOT NULL DEFAULT '',
+	`campo_62` varchar(30) NOT NULL DEFAULT '',
+	`campo_63` varchar(30) NOT NULL DEFAULT '',
+	`campo_64` varchar(30) NOT NULL DEFAULT '',
+	`campo_65` varchar(30) NOT NULL DEFAULT '',
+	`campo_66` varchar(30) NOT NULL DEFAULT '',
+	`campo_67` varchar(30) NOT NULL DEFAULT '',
+	`campo_68` varchar(30) NOT NULL DEFAULT '',
+	`campo_69` varchar(30) NOT NULL DEFAULT '',
+	`campo_70` varchar(30) NOT NULL DEFAULT '',
+	`campo_71` varchar(30) NOT NULL DEFAULT '',
+	`campo_72` varchar(255) NOT NULL DEFAULT '',
+	`campo_73` varchar(30) NOT NULL DEFAULT '',
+	`campo_74` varchar(255) NOT NULL DEFAULT '',
 	`campo_75` varchar(100) NOT NULL DEFAULT '',
-	`campo_76` varchar(100) NOT NULL DEFAULT '',
-	`campo_77` varchar(100) NOT NULL DEFAULT '',
-	`campo_78` varchar(100) NOT NULL DEFAULT '',
-	`campo_79` varchar(100) NOT NULL DEFAULT '',
-	`campo_80` varchar(100) NOT NULL DEFAULT '',
-	`campo_81` varchar(100) NOT NULL DEFAULT '',
-	`campo_82` varchar(100) NOT NULL DEFAULT '',
-	`campo_83` varchar(100) NOT NULL DEFAULT '',
-	`campo_84` varchar(100) NOT NULL DEFAULT '',
-	`campo_85` varchar(100) NOT NULL DEFAULT '',
-	`campo_86` varchar(100) NOT NULL DEFAULT '',
-	`campo_87` varchar(100) NOT NULL DEFAULT '',
-	`campo_88` varchar(100) NOT NULL DEFAULT '',
-	`campo_89` varchar(100) NOT NULL DEFAULT '',
-	`campo_90` varchar(100) NOT NULL DEFAULT '',
-	`campo_91` varchar(100) NOT NULL DEFAULT '',
-	`campo_92` varchar(100) NOT NULL DEFAULT '',
-	`campo_93` varchar(100) NOT NULL DEFAULT '',
-	`campo_94` varchar(100) NOT NULL DEFAULT '',
-	`campo_95` varchar(100) NOT NULL DEFAULT '',
-	`campo_96` varchar(100) NOT NULL DEFAULT '',
+	`campo_76` varchar(30) NOT NULL DEFAULT '',
+	`campo_77` varchar(30) NOT NULL DEFAULT '',
+	`campo_78` varchar(30) NOT NULL DEFAULT '',
+	`campo_79` varchar(30) NOT NULL DEFAULT '',
+	`campo_80` varchar(30) NOT NULL DEFAULT '',
+	`campo_81` varchar(30) NOT NULL DEFAULT '',
+	`campo_82` varchar(30) NOT NULL DEFAULT '',
+	`campo_83` varchar(30) NOT NULL DEFAULT '',
+	`campo_84` varchar(30) NOT NULL DEFAULT '',
+	`campo_85` varchar(30) NOT NULL DEFAULT '',
+	`campo_86` varchar(255) NOT NULL DEFAULT '',
+	`campo_87` varchar(30) NOT NULL DEFAULT '',
+	`campo_88` varchar(255) NOT NULL DEFAULT '',
+	`campo_89` varchar(30) NOT NULL DEFAULT '',
+	`campo_90` varchar(30) NOT NULL DEFAULT '',
+	`campo_91` varchar(30) NOT NULL DEFAULT '',
+	`campo_92` varchar(30) NOT NULL DEFAULT '',
+	`campo_93` varchar(30) NOT NULL DEFAULT '',
+	`campo_94` varchar(30) NOT NULL DEFAULT '',
+	`campo_95` varchar(30) NOT NULL DEFAULT '',
+	`campo_96` varchar(30) NOT NULL DEFAULT '',
 	PRIMARY KEY (`id_uni`),
 	CONSTRAINT `tb_e_ibfk_1` FOREIGN KEY (`id_uni`) REFERENCES `tb_unidades` (`id_uni`)   ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
-
--- ----------------------------
---  Records of `tb_e`
--- ----------------------------
-BEGIN;
-INSERT INTO `tb_e` VALUES ('1002', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''), ('2003', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''), ('3003', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''), ('5006', 'SI', '8:00 AM', '8:00 PM', '4', '2', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'SI', 'ASLKDAMSÑCKNAÑLKN', 'LKMSDCLÑKSNDCÑLKSADCN\r\nADLCNSLCKNA\r\nLDKCNALDCN\r\n', '', 'KK', 'BK', 'OIUK', 'BUIK', 'HKUK', 'GK', 'KYJFGK', 'JG', 'JKHG', 'JH', 'G', 'JKHG', 'JHG', 'JKH', 'GJK', 'HG', 'JKHJHF', 'HJG', 'JHG', '', 'J', 'HKH', 'KJHG', 'JKHG', 'JGH', 'FL', 'KJL', 'KJ', 'V'), ('6003', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
-COMMIT;
 
 -- ----------------------------
 --  Table structure for `tb_f`
@@ -599,42 +571,42 @@ COMMIT;
 DROP TABLE IF EXISTS `tb_f`;
 CREATE TABLE `tb_f` (
 	`id_uni` varchar(10) NOT NULL,
-	`campo_97` varchar(100) NOT NULL DEFAULT '',
-	`campo_98` varchar(100) NOT NULL DEFAULT '',
-	`campo_99` varchar(100) NOT NULL DEFAULT '',
-	`campo_100` varchar(100) NOT NULL DEFAULT '',
-	`campo_101` varchar(100) NOT NULL DEFAULT '',
-	`campo_102` varchar(100) NOT NULL DEFAULT '',
-	`campo_103` varchar(100) NOT NULL DEFAULT '',
-	`campo_104` varchar(100) NOT NULL DEFAULT '',
-	`campo_105` varchar(100) NOT NULL DEFAULT '',
-	`campo_106` varchar(100) NOT NULL DEFAULT '',
-	`campo_107` varchar(100) NOT NULL DEFAULT '',
-	`campo_108` varchar(100) NOT NULL DEFAULT '',
-	`campo_109` varchar(100) NOT NULL DEFAULT '',
-	`campo_110` varchar(100) NOT NULL DEFAULT '',
-	`campo_111` varchar(100) NOT NULL DEFAULT '',
-	`campo_112` varchar(100) NOT NULL DEFAULT '',
-	`campo_113` varchar(100) NOT NULL DEFAULT '',
-	`campo_114` varchar(100) NOT NULL DEFAULT '',
-	`campo_115` varchar(100) NOT NULL DEFAULT '',
-	`campo_116` varchar(100) NOT NULL DEFAULT '',
-	`campo_117` varchar(100) NOT NULL DEFAULT '',
-	`campo_118` varchar(100) NOT NULL DEFAULT '',
-	`campo_119` varchar(100) NOT NULL DEFAULT '',
-	`campo_120` varchar(100) NOT NULL DEFAULT '',
-	`campo_121` varchar(100) NOT NULL DEFAULT '',
-	`campo_122` varchar(100) NOT NULL DEFAULT '',
-	`campo_123` varchar(100) NOT NULL DEFAULT '',
-	`campo_124` varchar(100) NOT NULL DEFAULT '',
-	`campo_125` varchar(100) NOT NULL DEFAULT '',
-	`campo_126` varchar(100) NOT NULL DEFAULT '',
-	`campo_127` varchar(100) NOT NULL DEFAULT '',
-	`campo_128` varchar(100) NOT NULL DEFAULT '',
-	`campo_129` varchar(100) NOT NULL DEFAULT '',
-	`campo_130` varchar(100) NOT NULL DEFAULT '',
-	`campo_131` varchar(100) NOT NULL DEFAULT '',
-	`campo_132` varchar(100) NOT NULL DEFAULT '',
+	`campo_97` varchar(30) NOT NULL DEFAULT '',
+	`campo_98` varchar(30) NOT NULL DEFAULT '',
+	`campo_99` varchar(30) NOT NULL DEFAULT '',
+	`campo_100` varchar(30) NOT NULL DEFAULT '',
+	`campo_101` varchar(30) NOT NULL DEFAULT '',
+	`campo_102` varchar(30) NOT NULL DEFAULT '',
+	`campo_103` varchar(30) NOT NULL DEFAULT '',
+	`campo_104` varchar(30) NOT NULL DEFAULT '',
+	`campo_105` varchar(30) NOT NULL DEFAULT '',
+	`campo_106` varchar(30) NOT NULL DEFAULT '',
+	`campo_107` varchar(255) NOT NULL DEFAULT '',
+	`campo_108` varchar(30) NOT NULL DEFAULT '',
+	`campo_109` varchar(30) NOT NULL DEFAULT '',
+	`campo_110` varchar(30) NOT NULL DEFAULT '',
+	`campo_111` varchar(255) NOT NULL DEFAULT '',
+	`campo_112` varchar(30) NOT NULL DEFAULT '',
+	`campo_113` varchar(30) NOT NULL DEFAULT '',
+	`campo_114` varchar(30) NOT NULL DEFAULT '',
+	`campo_115` varchar(30) NOT NULL DEFAULT '',
+	`campo_116` varchar(30) NOT NULL DEFAULT '',
+	`campo_117` varchar(30) NOT NULL DEFAULT '',
+	`campo_118` varchar(30) NOT NULL DEFAULT '',
+	`campo_119` varchar(30) NOT NULL DEFAULT '',
+	`campo_120` varchar(30) NOT NULL DEFAULT '',
+	`campo_121` varchar(30) NOT NULL DEFAULT '',
+	`campo_122` varchar(30) NOT NULL DEFAULT '',
+	`campo_123` varchar(30) NOT NULL DEFAULT '',
+	`campo_124` varchar(30) NOT NULL DEFAULT '',
+	`campo_125` varchar(30) NOT NULL DEFAULT '',
+	`campo_126` varchar(30) NOT NULL DEFAULT '',
+	`campo_127` varchar(30) NOT NULL DEFAULT '',
+	`campo_128` varchar(30) NOT NULL DEFAULT '',
+	`campo_129` varchar(255) NOT NULL DEFAULT '',
+	`campo_130` varchar(30) NOT NULL DEFAULT '',
+	`campo_131` varchar(30) NOT NULL DEFAULT '',
+	`campo_132` varchar(30) NOT NULL DEFAULT '',
 	`campo_133` varchar(100) NOT NULL DEFAULT '',
 	`campo_134` varchar(100) NOT NULL DEFAULT '',
 	`campo_135` varchar(100) NOT NULL DEFAULT '',
@@ -658,29 +630,15 @@ CREATE TABLE `tb_f` (
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
 
 -- ----------------------------
---  Records of `tb_f`
--- ----------------------------
-BEGIN;
-INSERT INTO `tb_f` VALUES ('1002', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''), ('2003', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''), ('3003', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''), ('5006', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', ''), ('6003', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
-COMMIT;
-
--- ----------------------------
 --  Table structure for `tb_g`
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_g`;
 CREATE TABLE `tb_g` (
 	`id_uni` varchar(10) NOT NULL,
-	`campo_151` longtext DEFAULT NULL,
+	`campo_151` varchar(255) NOT NULL DEFAULT '',
 	PRIMARY KEY (`id_uni`),
 	CONSTRAINT `tb_g_ibfk_1` FOREIGN KEY (`id_uni`) REFERENCES `tb_unidades` (`id_uni`)   ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
-
--- ----------------------------
---  Records of `tb_g`
--- ----------------------------
-BEGIN;
-INSERT INTO `tb_g` VALUES ('1002', null), ('2003', null), ('3003', null), ('5006', null), ('6003', null);
-COMMIT;
 
 -- ----------------------------
 --  Table structure for `tb_unidades`
@@ -701,7 +659,7 @@ CREATE TABLE `tb_unidades` (
 --  Records of `tb_unidades`
 -- ----------------------------
 BEGIN;
-INSERT INTO `tb_unidades` VALUES ('10001', 'J.S. 10 SAN ANDRES TUXTLA', ' CATEMACO', ' CATEMACO', 'HI CATEMACO', ' HOSPITAL DE LA COMUNIDAD CATEMACO', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('10002', 'J.S. 10 SAN ANDRES TUXTLA', ' JESUS CARRANZA', ' SUCHILAPAN DEL RIO', 'HI SUCHILAPAN DEL RIO', ' HOSPITAL DE LA COMUNIDAD SUCHILAPAN DEL RIO. CARMEN BOUZAS DE LOPEZ ARIAS', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('10003', 'J.S. 10 SAN ANDRES TUXTLA', ' OLUTA', ' OLUTA', 'HG OLUTA (GRAL. MIGUEL ALEMAN GONZALEZ)', ' HOSPITAL GENERAL OLUTA GRAL MIGUEL ALEMAN GONZALEZ', ' HOSPITAL GENERAL'), ('10004', 'J.S. 10 SAN ANDRES TUXTLA', ' SAN ANDRES TUXTLA', ' SAN ANDRES TUXTLA', 'HG SAN ANDRES TUXTLA (DR. BERNARDO PENA)', ' HOSPITAL GENERAL SAN ANDRES TUXTLA. DR. BERNARDO PENA', ' HOSPITAL GENERAL'), ('10005', 'J.S. 10 SAN ANDRES TUXTLA', ' SANTIAGO TUXTLA', ' SANTIAGO TUXTLA', 'HG SANTIAGO TUXTLA (TEODORO DIEZ)', ' HOSPITAL GENERAL DE SANTIAGO TUXTLA TEODORO DIEZ', ' HOSPITAL GENERAL'), ('1001', 'J.S. 1 PANUCO', ' OZULUAMA DE MASCARENAS', ' OZULUAMA DE MASCARENAS', 'HI OZULUAMA DE MASCARENAS', ' HOSPITAL DE LA COMUNIDAD OZULUAMA DE MASCARENAS', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('1002', 'J.S. 1 PANUCO', ' PANUCO', ' PANUCO', 'HG PANUCO (DR. MANUEL I. AVILA)', ' HOSPITAL GENERAL PANUCO DR. MANUEL I AVILA', ' HOSPITAL GENERAL'), ('1003', 'J.S. 1 PANUCO', ' TANTOYUCA', ' TANTOYUCA', 'HG TANTOYUCA', ' HOSPITAL GENERAL TANTOYUCA', ' HOSPITAL GENERAL'), ('1004', 'J.S. 1 PANUCO', ' TEMPOAL', ' TEMPOAL DE SANCHEZ', 'HI TEMPOAL', ' HOSPITAL DE LA COMUNIDAD DE TEMPOAL', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('11001', 'J.S. 11 COATZACOALCOS', ' COATZACOALCOS', ' ALLENDE', 'HI ALLENDE', ' ALLENDE', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('11002', 'J.S. 11 COATZACOALCOS', ' COATZACOALCOS', ' COATZACOALCOS', 'HG COATZACOALCOS (DR.VALENTIN GOMEZ FARIAS)', ' HOSPITAL REGIONAL DE COATZACOALCOS DR.VALENTIN GOMEZ FARIAS', ' HOSPITAL GENERAL'), ('11003', 'J.S. 11 COATZACOALCOS', ' COSOLEACAQUE', ' COSOLEACAQUE', 'HG COSOLEACAQUE', ' HOSPITAL GENERAL COSOLEACAQUE', ' HOSPITAL GENERAL'), ('11004', 'J.S. 11 COATZACOALCOS', ' IXHUATLAN DEL SURESTE', ' IXHUATLAN DEL SURESTE', 'HI IXHUATLAN DEL SURESTE', ' HOSPITAL DE LA COMUNIDAD DE IXHUATLAN DEL SURESTE', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('11005', 'J.S. 11 COATZACOALCOS', ' LAS CHOAPAS', ' LAS CHOAPAS', 'HI PEDRO CORONEL PEREZ (LAS CHOAPAS)', ' HOSPITAL DE LA COMUNIDAD PEDRO CORONEL PEREZ', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('11006', 'J.S. 11 COATZACOALCOS', ' MECAYAPAN', ' TONALAPA', 'HI TONALAPAN', ' HOSPITAL DE LA COMUNIDAD DE TONALAPAN', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('11007', 'J.S. 11 COATZACOALCOS', ' MINATITLAN', ' MINATITLAN', 'HG MINATITLAN', ' HOSPITAL GENERAL DE MINATITLAN', ' HOSPITAL GENERAL'), ('11008', 'J.S. 11 COATZACOALCOS', ' UXPANAPA', ' LA LAGUNA (POBLADO SEIS ALMANZA)', 'HI LA LAGUNA (POBLADO 6)', ' HOSPITAL DE LA COMUNIDAD LA LAGUNA POBLADO 6', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('2001', 'J.S. 2 TUXPAM', ' CERRO AZUL', ' CERRO AZUL', 'HI CERRO AZUL', ' HOSPITAL DE LA COMUNIDAD DE CERRO AZUL', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('2002', 'J.S. 2 TUXPAM', ' NARANJOS AMATLAN', ' NARANJOS', 'HI NARANJOS', ' HOSPITAL DE LA COMUNIDAD NARANJOS', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('2003', 'J.S. 2 TUXPAM', ' NARANJOS AMATLAN', ' NARANJOS', 'HG NARANJOS (NUEVO)', ' HOSPITAL GENERAL NARANJOS (NUEVO)', ' HOSPITAL GENERAL'), ('2004', 'J.S. 2 TUXPAM', ' TEMAPACHE', ' ALAMO', 'HG ALAMO', ' HOSPITAL GENERAL ALAMO', ' HOSPITAL GENERAL'), ('2005', 'J.S. 2 TUXPAM', ' TUXPAM', ' TUXPAM DE RODRIGUEZ CANO', 'HG TUXPAN (DR. EMILIO ALCAZAR)', ' HOSPITAL GENERAL TUXPAN DR. EMILIO ALCAZAR', ' HOSPITAL GENERAL'), ('3001', 'J.S. 3 POZA RICA', ' ESPINAL', ' ENTABLADERO', 'HI ENTABLADERO', ' HOSPITAL DE LA COMUNIDAD DE ENTABLADERO', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('3002', 'J.S. 3 POZA RICA', ' HUAYACOCOTLA', ' HUAYACOCOTLA', 'HG HUAYACOCOTLA', ' HOSPITAL DE LA COMUNIDAD DE HUAYACOCOTLA', ' HOSPITAL GENERAL'), ('3003', 'J.S. 3 POZA RICA', ' IXHUATLAN DE MADERO', ' LLANO ENMEDIO', 'HI LLANO DE EN MEDIO', ' HOSPITAL DE LA COMUNIDAD DE LLANO DE EN MEDIO', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('3004', 'J.S. 3 POZA RICA', ' PAPANTLA', ' PAPANTLA DE OLARTE', 'HG PAPANTLA', ' HOSPITAL GENERAL PAPANTLA', ' HOSPITAL GENERAL'), ('3005', 'J.S. 3 POZA RICA', ' PAPANTLA', ' PAPANTLA DE OLARTE', 'HG PAPANTLA (DR. JOSE BUILL BELENGUER)', ' HOSPITAL GENERAL PAPANTLA DR. JOSE BUILL BELENGUER', ' HOSPITAL GENERAL'), ('3006', 'J.S. 3 POZA RICA', ' POZA RICA DE HIDALGO', ' POZA RICA DE HIDALGO', 'HG POZA RICA DE HIDALGO', ' HOSPITAL REGIONAL POZA RICA DE HIDALGO', ' HOSPITAL GENERAL'), ('4001', 'J.S. 4 MTZ DE LA TORRE', ' GUTIERREZ ZAMORA', ' GUTIERREZ ZAMORA', 'HI GUTIERREZ ZAMORA', ' HOSPITAL DE LA COMUNIDAD DE GUTIERREZ ZAMORA', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('4002', 'J.S. 4 MTZ DE LA TORRE', ' MARTINEZ DE LA TORRE', ' MARTINEZ DE LA TORRE', 'HG MARTINEZ DE LA TORRE (MANUEL AVILA CAMACHO)', ' HOSPITAL GENERAL MARTINEZ DE LA TORRE MANUEL AVILA CAMACHO', ' HOSPITAL GENERAL'), ('4003', 'J.S. 4 MTZ DE LA TORRE', ' MISANTLA', ' MISANTLA', 'HG DE MISANTLA', ' HOSPITAL GENERAL DE MISANTLA', ' HOSPITAL GENERAL'), ('4004', 'J.S. 4 MTZ DE LA TORRE', ' NAUTLA', ' NAUTLA', 'HI NAUTLA', ' NAUTLA', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('4005', 'J.S. 4 MTZ DE LA TORRE', ' TLAPACOYAN', ' TLAPACOYAN', 'HI TLAPACOYAN', ' HOSPITAL DE LA COMUNDAD DE TLAPACOYAN', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('5001', 'J.S. 5 XALAPA', ' ALTO LUCERO DE GUTIERREZ BARRIOS', ' ALTO LUCERO', 'HI ALTO LUCERO', ' CENTRO DE SALUD CON SERVICIOS AMPLIADOS ALTO LUCERO', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('5002', 'J.S. 5 XALAPA', ' ALTOTONGA', ' ALTOTONGA', 'HG ALTOTONGA (EUFROSINA CAMACHO)', ' HOSPITAL GENERAL ALTOTONGA EUFROSINA CAMACHO', ' HOSPITAL GENERAL'), ('5003', 'J.S. 5 XALAPA', ' COATEPEC', ' COATEPEC', 'HI COATEPEC', ' HOSPITAL DE LA COMUNIDAD COATEPEC', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('5004', 'J.S. 5 XALAPA', ' NAOLINCO', ' NAOLINCO DE VICTORIA', 'HI NAOLINCO', ' HOSPITAL DE LA COMUNIDAD DE NAOLINCO', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('5005', 'J.S. 5 XALAPA', ' PEROTE', ' PEROTE', 'HG PEROTE', ' HOSPITAL GENERAL PEROTE', ' HOSPITAL GENERAL'), ('5006', 'J.S. 5 XALAPA', ' TEOCELO', ' TEOCELO', 'HI TEOCELO', ' HOSPITAL DE LA COMUNIDAD DE TEOCELO', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('5007', 'J.S. 5 XALAPA', ' XALAPA', ' XALAPA-ENRIQUEZ', 'HE ALTA ESPECIALIDAD DR. RAFAEL LUCIO (XALAPA)', ' CENTRO DE ALTA ESPECIALIDAD DR. RAFAEL LUCIO', ' HOSPITAL ESPECIALIZADO'), ('5008', 'J.S. 5 XALAPA', ' XALAPA', ' XALAPA-ENRIQUEZ', 'HE SALUD MENTAL (XALAPA)', ' CENTRO DE REHABILITACION EN SALUD MENTAL', ' HOSPITAL PSIQUIATRICO (INCLUYE GRANJAS)'), ('5009', 'J.S. 5 XALAPA', ' XALAPA', ' XALAPA-ENRIQUEZ', 'HE CANCEROLOGIA DR. MIGUEL DORANTES MESA', ' CENTRO ESTATAL DE CANCEROLOGIA DR. MIGUEL DORANTES MESA', ' HOSPITAL ESPECIALIZADO'), ('5010', 'J.S. 5 XALAPA', ' XALAPA', ' XALAPA-ENRIQUEZ', 'HG XALAPA (DR. LUIS F. NACHON)', ' HOSPITAL REGIONAL DE XALAPA DR. LUIS F. NACHON', ' HOSPITAL GENERAL'), ('6001', 'J.S. 6 CORDOBA', ' CORDOBA', ' CORDOBA', 'HG CORDOBA (YANGA)', ' HOSPITAL GENERAL CORDOBA YANGA', ' HOSPITAL GENERAL'), ('6002', 'J.S. 6 CORDOBA', ' HUATUSCO', ' HUATUSCO DE CHICUELLAR', 'HG HUATUSCO (DR. DARIO MENDEZ LIMA)', ' HOSPITAL GENERAL HUATUSCO DR. DARIO MENDEZ LIMA', ' HOSPITAL GENERAL'), ('6003', 'J.S. 6 CORDOBA', ' TEZONAPA', ' TEZONAPA', 'HI TEZONAPA', ' HOSPITAL DE LA COMUNIDAD DE TEZONAPA', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('7001', 'J.S. 7 ORIZABA', ' ORIZABA', ' ORIZABA', 'HE SALUD MENTAL (ORIZABA)', ' HOSPITAL DE SALUD MENTAL ORIZABA DR VICTOR M. CONCHA VASQUEZ', ' HOSPITAL PSIQUIATRICO (INCLUYE GRANJAS)'), ('7002', 'J.S. 7 ORIZABA', ' RIO BLANCO', ' RIO BLANCO', 'HG RIO BLANCO', ' HOSPITAL REGIONAL RIO BLANCO', ' HOSPITAL GENERAL'), ('7003', 'J.S. 7 ORIZABA', ' TLAQUILPA', ' VISTA HERMOSA', 'HI TLAQUILPA', ' HOSPITAL DE LA COMUNIDAD DE TLAQUILPA', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('8004', 'J.S. 8 VERACRUZ', ' ALVARADO', ' ALVARADO', 'HI ALVARADO', ' HOSPITAL DE LA COMUNIDAD DE ALVARADO', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('8005', 'J.S. 8 VERACRUZ', ' LA ANTIGUA', ' JOSE CARDEL', 'HG CARDEL', ' HOSPITAL GENERAL DE CARDEL', ' HOSPITAL GENERAL'), ('8006', 'J.S. 8 VERACRUZ', ' TLALIXCOYAN', ' TLALIXCOYAN', 'HI TLALIXCOYAN', ' HOSPITAL DE LA COMUNIDAD TLALIXCOYAN', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('8007', 'J.S. 8 VERACRUZ', ' VERACRUZ', ' VERACRUZ', 'HE ALTA ESPECIALIDAD (VERACRUZ)', ' HOSPITAL DE ALTA ESPECIALIDAD DE VERACRUZ', ' HOSPITAL ESPECIALIZADO'), ('8008', 'J.S. 8 VERACRUZ', ' VERACRUZ', ' VERACRUZ', 'HG TARIMOYA (VERACRUZ)', ' HOSPITAL GENERAL DE TARIMOYA (VERACRUZ)', ' HOSPITAL GENERAL'), ('9001', 'J.S. 9 COSAMALOAPAN', ' COSAMALOAPAN DE CARPIO', ' COSAMALOAPAN', 'HG COSAMALOAPAN (DR. VICTOR MANUEL PITALUA GONZALEZ)', ' HOSPITAL GENERAL COSAMALOAPAN DR. VICTOR MANUEL PITALUA GONZALEZ', ' HOSPITAL GENERAL'), ('9002', 'J.S. 9 COSAMALOAPAN', ' ISLA', ' ISLA', 'HG ISLA', ' HOSPITAL GENERAL ISLA', ' HOSPITAL GENERAL'), ('9003', 'J.S. 9 COSAMALOAPAN', ' JOSE AZUETA', ' VILLA AZUETA', 'HI JOSE AZUETA', ' HOSPITAL DE LA COMUNIDAD DE JOSE AZUETA', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('9004', 'J.S. 9 COSAMALOAPAN', ' PLAYA VICENTE', ' PLAYA VICENTE', 'HI PLAYA VICENTE', ' HOSPITAL DE LA COMUNIDAD PLAYA VICENTE', ' HOSPITAL INTEGRAL (COMUNITARIO)'), ('9005', 'J.S. 9 COSAMALOAPAN', ' TIERRA BLANCA', ' TIERRA BLANCA', 'HG TIERRA BLANCA (JESUS GARCIA CORONA)', ' HOSPITAL GENERAL DE TIERRA BLANCA JESUS GARCIA CORONA', ' HOSPITAL GENERAL'), ('9006', 'J.S. 9 COSAMALOAPAN', ' TLACOTALPAN', ' TLACOTALPAN', 'HI TLACOTALPAN', ' HOSPITAL DE LA COMUNIDAD TLACOTALPAN', ' HOSPITAL INTEGRAL (COMUNITARIO)');
+INSERT INTO `tb_unidades` VALUES ('10001', 'J.S. 10 SAN ANDRES TUXTLA', 'CATEMACO', 'CATEMACO', 'HI CATEMACO', 'HOSPITAL DE LA COMUNIDAD CATEMACO', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('10002', 'J.S. 10 SAN ANDRES TUXTLA', 'JESUS CARRANZA', 'JESUS CARRANZA', 'HI SUCHILAPAN DEL RIO', 'HOSPITAL DE LA COMUNIDAD SUCHILAPAN DEL RIO. CARMEN BOUZAS DE LOPEZ ARIAS', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('10003', 'J.S. 10 SAN ANDRES TUXTLA', 'OLUTA', 'OLUTA', 'HG OLUTA (GRAL. MIGUEL ALEMAN GONZALEZ)', 'HOSPITAL GENERAL OLUTA GRAL MIGUEL ALEMAN GONZALEZ', 'HOSPITAL GENERAL'), ('10004', 'J.S. 10 SAN ANDRES TUXTLA', 'SAN ANDRES TUXTLA', 'SAN ANDRES TUXTLA', 'HG SAN ANDRES TUXTLA (DR. BERNARDO PENA)', 'HOSPITAL GENERAL SAN ANDRES TUXTLA. DR. BERNARDO PENA', 'HOSPITAL GENERAL'), ('10005', 'J.S. 10 SAN ANDRES TUXTLA', 'SANTIAGO TUXTLA', 'SANTIAGO TUXTLA', 'HG SANTIAGO TUXTLA (TEODORO DIEZ)', 'HOSPITAL GENERAL DE SANTIAGO TUXTLA TEODORO DIEZ', 'HOSPITAL GENERAL'), ('1001', 'J.S. 1 PANUCO', 'OZULUAMA DE MASCARENAS', 'OZULUAMA DE MASCARENAS', 'HI OZULUAMA DE MASCARENAS', 'HOSPITAL DE LA COMUNIDAD OZULUAMA DE MASCARENAS', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('1002', 'J.S. 1 PANUCO', 'PANUCO', 'PANUCO', 'HG PANUCO (DR. MANUEL I. AVILA)', 'HOSPITAL GENERAL PANUCO DR. MANUEL I AVILA', 'HOSPITAL GENERAL'), ('1003', 'J.S. 1 PANUCO', 'TANTOYUCA', 'TANTOYUCA', 'HG TANTOYUCA', 'HOSPITAL GENERAL TANTOYUCA', 'HOSPITAL GENERAL'), ('1004', 'J.S. 1 PANUCO', 'TEMPOAL', 'TEMPOAL', 'HI TEMPOAL', 'HOSPITAL DE LA COMUNIDAD DE TEMPOAL', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('11001', 'J.S. 11 COATZACOALCOS', 'COATZACOALCOS', 'COATZACOALCOS', 'HI ALLENDE', 'ALLENDE', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('11002', 'J.S. 11 COATZACOALCOS', 'COATZACOALCOS', 'COATZACOALCOS', 'HG COATZACOALCOS (DR.VALENTIN GOMEZ FARIAS)', 'HOSPITAL REGIONAL DE COATZACOALCOS DR.VALENTIN GOMEZ FARIAS', 'HOSPITAL GENERAL'), ('11003', 'J.S. 11 COATZACOALCOS', 'COSOLEACAQUE', 'COSOLEACAQUE', 'HG COSOLEACAQUE', 'HOSPITAL GENERAL COSOLEACAQUE', 'HOSPITAL GENERAL'), ('11004', 'J.S. 11 COATZACOALCOS', 'IXHUATLAN DEL SURESTE', 'IXHUATLAN DEL SURESTE', 'HI IXHUATLAN DEL SURESTE', 'HOSPITAL DE LA COMUNIDAD DE IXHUATLAN DEL SURESTE', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('11005', 'J.S. 11 COATZACOALCOS', 'LAS CHOAPAS', 'LAS CHOAPAS', 'HI PEDRO CORONEL PEREZ (LAS CHOAPAS)', 'HOSPITAL DE LA COMUNIDAD PEDRO CORONEL PEREZ', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('11006', 'J.S. 11 COATZACOALCOS', 'MECAYAPAN', 'MECAYAPAN', 'HI TONALAPAN', 'HOSPITAL DE LA COMUNIDAD DE TONALAPAN', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('11007', 'J.S. 11 COATZACOALCOS', 'MINATITLAN', 'MINATITLAN', 'HG MINATITLAN', 'HOSPITAL GENERAL DE MINATITLAN', 'HOSPITAL GENERAL'), ('11008', 'J.S. 11 COATZACOALCOS', 'UXPANAPA', 'UXPANAPA', 'HI LA LAGUNA (POBLADO 6)', 'HOSPITAL DE LA COMUNIDAD LA LAGUNA POBLADO 6', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('2001', 'J.S. 2 TUXPAM', 'CERRO AZUL', 'CERRO AZUL', 'HI CERRO AZUL', 'HOSPITAL DE LA COMUNIDAD DE CERRO AZUL', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('2002', 'J.S. 2 TUXPAM', 'NARANJOS AMATLAN', 'NARANJOS AMATLAN', 'HI NARANJOS', 'HOSPITAL DE LA COMUNIDAD NARANJOS', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('2003', 'J.S. 2 TUXPAM', 'NARANJOS AMATLAN', 'NARANJOS AMATLAN', 'HG NARANJOS (NUEVO)', 'HOSPITAL GENERAL NARANJOS (NUEVO)', 'HOSPITAL GENERAL'), ('2004', 'J.S. 2 TUXPAM', 'TEMAPACHE', 'TEMAPACHE', 'HG ALAMO', 'HOSPITAL GENERAL ALAMO', 'HOSPITAL GENERAL'), ('2005', 'J.S. 2 TUXPAM', 'TUXPAM', 'TUXPAM', 'HG TUXPAN (DR. EMILIO ALCAZAR)', 'HOSPITAL GENERAL TUXPAN DR. EMILIO ALCAZAR', 'HOSPITAL GENERAL'), ('3001', 'J.S. 3 POZA RICA', 'ESPINAL', 'ESPINAL', 'HI ENTABLADERO', 'HOSPITAL DE LA COMUNIDAD DE ENTABLADERO', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('3002', 'J.S. 3 POZA RICA', 'HUAYACOCOTLA', 'HUAYACOCOTLA', 'HG HUAYACOCOTLA', 'HOSPITAL DE LA COMUNIDAD DE HUAYACOCOTLA', 'HOSPITAL GENERAL'), ('3003', 'J.S. 3 POZA RICA', 'IXHUATLAN DE MADERO', 'IXHUATLAN DE MADERO', 'HI LLANO DE EN MEDIO', 'HOSPITAL DE LA COMUNIDAD DE LLANO DE EN MEDIO', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('3004', 'J.S. 3 POZA RICA', 'PAPANTLA', 'PAPANTLA', 'HG PAPANTLA', 'HOSPITAL GENERAL PAPANTLA', 'HOSPITAL GENERAL'), ('3005', 'J.S. 3 POZA RICA', 'PAPANTLA', 'PAPANTLA', 'HG PAPANTLA (DR. JOSE BUILL BELENGUER)', 'HOSPITAL GENERAL PAPANTLA DR. JOSE BUILL BELENGUER', 'HOSPITAL GENERAL'), ('3006', 'J.S. 3 POZA RICA', 'POZA RICA DE HIDALGO', 'POZA RICA DE HIDALGO', 'HG POZA RICA DE HIDALGO', 'HOSPITAL REGIONAL POZA RICA DE HIDALGO', 'HOSPITAL GENERAL'), ('4001', 'J.S. 4 MTZ DE LA TORRE', 'GUTIERREZ ZAMORA', 'GUTIERREZ ZAMORA', 'HI GUTIERREZ ZAMORA', 'HOSPITAL DE LA COMUNIDAD DE GUTIERREZ ZAMORA', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('4002', 'J.S. 4 MTZ DE LA TORRE', 'MARTINEZ DE LA TORRE', 'MARTINEZ DE LA TORRE', 'HG MARTINEZ DE LA TORRE (MANUEL AVILA CAMACHO)', 'HOSPITAL GENERAL MARTINEZ DE LA TORRE MANUEL AVILA CAMACHO', 'HOSPITAL GENERAL'), ('4003', 'J.S. 4 MTZ DE LA TORRE', 'MISANTLA', 'MISANTLA', 'HG DE MISANTLA', 'HOSPITAL GENERAL DE MISANTLA', 'HOSPITAL GENERAL'), ('4004', 'J.S. 4 MTZ DE LA TORRE', 'NAUTLA', 'NAUTLA', 'HI NAUTLA', 'NAUTLA', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('4005', 'J.S. 4 MTZ DE LA TORRE', 'TLAPACOYAN', 'TLAPACOYAN', 'HI TLAPACOYAN', 'HOSPITAL DE LA COMUNDAD DE TLAPACOYAN', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('5001', 'J.S. 5 XALAPA', 'ALTO LUCERO DE GUTIERREZ BARRIOS', 'ALTO LUCERO DE GUTIERREZ BARRIOS', 'HI ALTO LUCERO', 'CENTRO DE SALUD CON SERVICIOS AMPLIADOS ALTO LUCERO', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('5002', 'J.S. 5 XALAPA', 'ALTOTONGA', 'ALTOTONGA', 'HG ALTOTONGA (EUFROSINA CAMACHO)', 'HOSPITAL GENERAL ALTOTONGA EUFROSINA CAMACHO', 'HOSPITAL GENERAL'), ('5003', 'J.S. 5 XALAPA', 'COATEPEC', 'COATEPEC', 'HI COATEPEC', 'HOSPITAL DE LA COMUNIDAD COATEPEC', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('5004', 'J.S. 5 XALAPA', 'NAOLINCO', 'NAOLINCO', 'HI NAOLINCO', 'HOSPITAL DE LA COMUNIDAD DE NAOLINCO', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('5005', 'J.S. 5 XALAPA', 'PEROTE', 'PEROTE', 'HG PEROTE', 'HOSPITAL GENERAL PEROTE', 'HOSPITAL GENERAL'), ('5006', 'J.S. 5 XALAPA', 'TEOCELO', 'TEOCELO', 'HI TEOCELO', 'HOSPITAL DE LA COMUNIDAD DE TEOCELO', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('5007', 'J.S. 5 XALAPA', 'XALAPA', 'XALAPA', 'HE ALTA ESPECIALIDAD DR. RAFAEL LUCIO (XALAPA)', 'CENTRO DE ALTA ESPECIALIDAD DR. RAFAEL LUCIO', 'HOSPITAL ESPECIALIZADO'), ('5008', 'J.S. 5 XALAPA', 'XALAPA', 'XALAPA', 'HE SALUD MENTAL (XALAPA)', 'CENTRO DE REHABILITACION EN SALUD MENTAL', 'HOSPITAL PSIQUIATRICO (INCLUYE GRANJAS)'), ('5009', 'J.S. 5 XALAPA', 'XALAPA', 'XALAPA', 'HE CANCEROLOGIA DR. MIGUEL DORANTES MESA', 'CENTRO ESTATAL DE CANCEROLOGIA DR. MIGUEL DORANTES MESA', 'HOSPITAL ESPECIALIZADO'), ('5010', 'J.S. 5 XALAPA', 'XALAPA', 'XALAPA', 'HG XALAPA (DR. LUIS F. NACHON)', 'HOSPITAL REGIONAL DE XALAPA DR. LUIS F. NACHON', 'HOSPITAL GENERAL'), ('6001', 'J.S. 6 CORDOBA', 'CORDOBA', 'CORDOBA', 'HG CORDOBA (YANGA)', 'HOSPITAL GENERAL CORDOBA YANGA', 'HOSPITAL GENERAL'), ('6002', 'J.S. 6 CORDOBA', 'HUATUSCO', 'HUATUSCO', 'HG HUATUSCO (DR. DARIO MENDEZ LIMA)', 'HOSPITAL GENERAL HUATUSCO DR. DARIO MENDEZ LIMA', 'HOSPITAL GENERAL'), ('6003', 'J.S. 6 CORDOBA', 'TEZONAPA', 'TEZONAPA', 'HI TEZONAPA', 'HOSPITAL DE LA COMUNIDAD DE TEZONAPA', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('7001', 'J.S. 7 ORIZABA', 'ORIZABA', 'ORIZABA', 'HE SALUD MENTAL (ORIZABA)', 'HOSPITAL DE SALUD MENTAL ORIZABA DR VICTOR M. CONCHA VASQUEZ', 'HOSPITAL PSIQUIATRICO (INCLUYE GRANJAS)'), ('7002', 'J.S. 7 ORIZABA', 'RIO BLANCO', 'RIO BLANCO', 'HG RIO BLANCO', 'HOSPITAL REGIONAL RIO BLANCO', 'HOSPITAL GENERAL'), ('7003', 'J.S. 7 ORIZABA', 'TLAQUILPA', 'TLAQUILPA', 'HI TLAQUILPA', 'HOSPITAL DE LA COMUNIDAD DE TLAQUILPA', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('8004', 'J.S. 8 VERACRUZ', 'ALVARADO', 'ALVARADO', 'HI ALVARADO', 'HOSPITAL DE LA COMUNIDAD DE ALVARADO', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('8005', 'J.S. 8 VERACRUZ', 'LA ANTIGUA', 'LA ANTIGUA', 'HG CARDEL', 'HOSPITAL GENERAL DE CARDEL', 'HOSPITAL GENERAL'), ('8006', 'J.S. 8 VERACRUZ', 'TLALIXCOYAN', 'TLALIXCOYAN', 'HI TLALIXCOYAN', 'HOSPITAL DE LA COMUNIDAD TLALIXCOYAN', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('8007', 'J.S. 8 VERACRUZ', 'VERACRUZ', 'VERACRUZ', 'HE ALTA ESPECIALIDAD (VERACRUZ)', 'HOSPITAL DE ALTA ESPECIALIDAD DE VERACRUZ', 'HOSPITAL ESPECIALIZADO'), ('8008', 'J.S. 8 VERACRUZ', 'VERACRUZ', 'VERACRUZ', 'HG TARIMOYA (VERACRUZ)', 'HOSPITAL GENERAL DE TARIMOYA (VERACRUZ)', 'HOSPITAL GENERAL'), ('9001', 'J.S. 9 COSAMALOAPAN', 'COSAMALOAPAN DE CARPIO', 'COSAMALOAPAN DE CARPIO', 'HG COSAMALOAPAN (DR. VICTOR MANUEL PITALUA GONZALEZ)', 'HOSPITAL GENERAL COSAMALOAPAN DR. VICTOR MANUEL PITALUA GONZALEZ', 'HOSPITAL GENERAL'), ('9002', 'J.S. 9 COSAMALOAPAN', 'ISLA', 'ISLA', 'HG ISLA', 'HOSPITAL GENERAL ISLA', 'HOSPITAL GENERAL'), ('9003', 'J.S. 9 COSAMALOAPAN', 'JOSE AZUETA', 'JOSE AZUETA', 'HI JOSE AZUETA', 'HOSPITAL DE LA COMUNIDAD DE JOSE AZUETA', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('9004', 'J.S. 9 COSAMALOAPAN', 'PLAYA VICENTE', 'PLAYA VICENTE', 'HI PLAYA VICENTE', 'HOSPITAL DE LA COMUNIDAD PLAYA VICENTE', 'HOSPITAL INTEGRAL (COMUNITARIO)'), ('9005', 'J.S. 9 COSAMALOAPAN', 'TIERRA BLANCA', 'TIERRA BLANCA', 'HG TIERRA BLANCA (JESUS GARCIA CORONA)', 'HOSPITAL GENERAL DE TIERRA BLANCA JESUS GARCIA CORONA', 'HOSPITAL GENERAL'), ('9006', 'J.S. 9 COSAMALOAPAN', 'TLACOTALPAN', 'TLACOTALPAN', 'HI TLACOTALPAN', 'HOSPITAL DE LA COMUNIDAD TLACOTALPAN', 'HOSPITAL INTEGRAL (COMUNITARIO)');
 COMMIT;
 
 -- ----------------------------

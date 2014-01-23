@@ -1,3 +1,5 @@
+<%@page import="java.text.DecimalFormat"%>
+<%@page import="java.text.DecimalFormatSymbols"%>
 <%@page import="conn.ConectionDB"%>
 <%@ page contentType="text/html; charset=iso-8859-1" language="java" import="java.sql.*" session="true" errorPage="" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -14,7 +16,12 @@
         ResultSet rset = con.consulta("select * from tb_a as a, tb_b as b, tb_c as c, tb_d as d, tb_e as e, tb_f as f, tb_g as g, tb_unidades as clave where clave.id_uni=a.id_uni and clave.id_uni=b.id_uni and clave.id_uni=c.id_uni and clave.id_uni=d.id_uni and clave.id_uni=e.id_uni and clave.id_uni=f.id_uni and clave.id_uni=g.id_uni and clave.id_uni = '" + id_uni + "';");
         while (rset.next()) {
 %>
-
+<%
+DecimalFormatSymbols simbolos = new DecimalFormatSymbols();
+simbolos.setDecimalSeparator('.');
+simbolos.setGroupingSeparator(',');
+DecimalFormat forma2= new DecimalFormat("##,###.##", simbolos);
+%>
 <html xmlns="http://www.w3.org/1999/xhtml">
     <!-- DW6 -->
     <head>
@@ -148,78 +155,74 @@
                         <tr>
                             <td colspan="7"  class="style58">Estatus del Censo:<br/> 
                                 <%
-
+                                    float total = 0;
                                     for (int i = 1; i <= 28; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección A incompleta - ");
+                                            total++;
                                             break;
                                         }
                                     }
 
                                 %>
-                                <%
-
-                                    for (int i = 29; i <= 33; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                <%                                    for (int i = 29; i <= 33; i++) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección B incompleta - ");
+                                            total++;
                                             break;
                                         }
                                     }
 
                                 %>
-                                <%
-
-                                    for (int i = 34; i <= 40; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                <%                                    for (int i = 34; i <= 40; i++) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección C incompleta - ");
+                                            total++;
                                             break;
                                         }
                                     }
 
                                 %>
-                                <%
-
-                                    for (int i = 41; i <= 43; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                <%                                    for (int i = 41; i <= 43; i++) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección D incompleta - ");
+                                            total++;
                                             break;
                                         }
                                     }
 
                                 %>
-                                <%
-
-                                    for (int i = 44; i <= 96; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                <%                                    for (int i = 44; i <= 96; i++) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección E incompleta - ");
+                                            total++;
                                             break;
                                         }
                                     }
 
                                 %>
-                                <%
-
-                                    for (int i = 97; i <= 150; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                <%                                    for (int i = 97; i <= 150; i++) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección F incompleta - ");
+                                            total++;
                                             break;
                                         }
                                     }
 
                                 %>
-                                <%
-
-                                    for (int i = 151; i <= 151; i++) {
-                                        if (rset.getString("campo_"+i).equals("")) {
+                                <%                                    for (int i = 151; i <= 151; i++) {
+                                        if (rset.getString("campo_" + i).equals("")) {
                                             out.println("Sección G incompleta");
+                                            total++;
                                             break;
                                         }
                                     }
 
+                                    float avance = total / 7;
                                 %>
-                                </tr>
+                        </tr>
                         <tr>
-                            <td colspan="7"  class="style43 style51"><hr /></td>
+                            <td colspan="7"><div class="panel panel-primary">Porcentaje de Avance =<%=forma2.format((1 - avance) * 100)%> %</div></td>
                         </tr>
                         <tr>
                             <td colspan="3"  class="style58">Seleccione Secci&oacute;n
@@ -258,7 +261,7 @@
                                 int contCam = 0;
                                 //nombreC=nomCam+(contCam+=1);
                                 //out.print(nombreC);
-                            %>
+%>
                             <tr>
                                 <td width="29" class="style58"><div align="center">A.1</div></td>
                                 <td width="189" class="style58">Elaborado por </td>
@@ -272,7 +275,7 @@
                                 <td bgcolor="#FFFFFF" class="style58">A.2</td>
                                 <%
                                     //int contCam=79;
-                                %>
+%>
                                 <td class="style58"><div align="left">Nombre del Encuestado</div></td>
                                 <td>             
                                     <label>
