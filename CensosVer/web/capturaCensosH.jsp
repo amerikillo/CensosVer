@@ -1785,7 +1785,7 @@ DecimalFormat forma2= new DecimalFormat("##,###.##", simbolos);
 
 
                         <tr>
-                            <td colspan="7" class="style47"><strong class="neg">DERECHOS RESERVADOS GNKL/DESARROLLOS WEB &reg; 2009 - 2013</strong></td>
+                            <td colspan="7" class="style47"><strong class="neg">DERECHOS RESERVADOS GNKL/DESARROLLOS WEB &reg; 2009 - 2014</strong></td>
                         </tr>
                     </table>
                 </td>
@@ -2027,11 +2027,11 @@ DecimalFormat forma2= new DecimalFormat("##,###.##", simbolos);
     });
 
     $('#form_com').submit(function() {
-        //alert("huges");
+        //
         return false;
     });
     $("#btn_com").click(function() {
-
+alert("huges");
     var nom = $('#txtf_nom').val();
             var cor = $('#txtf_cor').val();
             var com = $('#txta_com').val();
