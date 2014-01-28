@@ -11,7 +11,7 @@
  Target Server Version : 50615
  File Encoding         : utf-8
 
- Date: 01/23/2014 17:33:23 PM
+ Date: 01/28/2014 07:45:17 AM
 */
 
 SET NAMES utf8;
@@ -454,7 +454,7 @@ CREATE TABLE `tb_a` (
 --  Records of `tb_a`
 -- ----------------------------
 BEGIN;
-INSERT INTO `tb_a` VALUES ('1001', 'ENCUESTADOR 1', 'ANIBAL', '23/01/2014 17:12:17', 'HI OZULUAMA DE MASCARENAS', 'HOSPITAL INTEGRAL (COMUNITARIO)', 'DIRECCIÓN DE ANIBAL', 'HI OZULUAMA DE MASCARENAS', 'COLONIA', 'TOLUCA', 'OZULUAMA DE MASCARENAS', 'VERACRUZ', '23445', '12D', '129483912', '129483912', 'PAGINA.COM', '501 A 1,000 HABITANTES', 'J.S. 1 PANUCO', 'OZULUAMA DE MASCARENAS', '5', '12', '3', 'NOMBRE DEL ADMINISTRADOR', '219038309', 'CORREO.COM@CORREO', 'NOMBRE DEL DIRECTOR', '1092731029', 'CORREO.COM@CORREO'), ('1002', 'Encuestador 1', '', '23/01/2014 16:10:04', 'HG PANUCO (DR. MANUEL I. AVILA)', 'HOSPITAL GENERAL', '', 'HG PANUCO (DR. MANUEL I. AVILA)', '', '', 'PANUCO', 'VERACRUZ', '', '', '', '', '', '', 'J.S. 1 PANUCO', 'PANUCO', '', '', '', '', '', '', '', '', ''), ('8005', 'Encuestador 1', '', '23/01/2014 16:10:18', 'HG CARDEL', 'HOSPITAL GENERAL', '', 'HG CARDEL', '', '', 'LA ANTIGUA', 'VERACRUZ', '', '', '', '', '', '', 'J.S. 8 VERACRUZ', 'LA ANTIGUA', '', '', '', '', '', '', '', '', '');
+INSERT INTO `tb_a` VALUES ('1001', 'Encuestador 1', '', '28/01/2014 07:42:32', 'HI OZULUAMA DE MASCARENAS', 'HOSPITAL INTEGRAL (COMUNITARIO)', '', 'HI OZULUAMA DE MASCARENAS', '', '', 'OZULUAMA DE MASCARENAS', 'VERACRUZ', '', '', '', '', '', '', 'J.S. 1 PANUCO', 'OZULUAMA DE MASCARENAS', '', '', '', '', '', '', '', '', '');
 COMMIT;
 
 -- ----------------------------
@@ -471,6 +471,13 @@ CREATE TABLE `tb_b` (
 	PRIMARY KEY (`id_uni`),
 	CONSTRAINT `tb_b_ibfk_1` FOREIGN KEY (`id_uni`) REFERENCES `tb_unidades` (`id_uni`)   ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
+
+-- ----------------------------
+--  Records of `tb_b`
+-- ----------------------------
+BEGIN;
+INSERT INTO `tb_b` VALUES ('1001', '', '', '', '', '');
+COMMIT;
 
 -- ----------------------------
 --  Table structure for `tb_c`
@@ -490,6 +497,13 @@ CREATE TABLE `tb_c` (
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
 
 -- ----------------------------
+--  Records of `tb_c`
+-- ----------------------------
+BEGIN;
+INSERT INTO `tb_c` VALUES ('1001', '', '', '', '', '', '', '');
+COMMIT;
+
+-- ----------------------------
 --  Table structure for `tb_d`
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_d`;
@@ -501,6 +515,13 @@ CREATE TABLE `tb_d` (
 	PRIMARY KEY (`id_uni`),
 	CONSTRAINT `tb_d_ibfk_1` FOREIGN KEY (`id_uni`) REFERENCES `tb_unidades` (`id_uni`)   ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
+
+-- ----------------------------
+--  Records of `tb_d`
+-- ----------------------------
+BEGIN;
+INSERT INTO `tb_d` VALUES ('1001', '', '', '');
+COMMIT;
 
 -- ----------------------------
 --  Table structure for `tb_e`
@@ -564,6 +585,13 @@ CREATE TABLE `tb_e` (
 	PRIMARY KEY (`id_uni`),
 	CONSTRAINT `tb_e_ibfk_1` FOREIGN KEY (`id_uni`) REFERENCES `tb_unidades` (`id_uni`)   ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
+
+-- ----------------------------
+--  Records of `tb_e`
+-- ----------------------------
+BEGIN;
+INSERT INTO `tb_e` VALUES ('1001', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+COMMIT;
 
 -- ----------------------------
 --  Table structure for `tb_f`
@@ -630,15 +658,29 @@ CREATE TABLE `tb_f` (
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
 
 -- ----------------------------
+--  Records of `tb_f`
+-- ----------------------------
+BEGIN;
+INSERT INTO `tb_f` VALUES ('1001', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '', '');
+COMMIT;
+
+-- ----------------------------
 --  Table structure for `tb_g`
 -- ----------------------------
 DROP TABLE IF EXISTS `tb_g`;
 CREATE TABLE `tb_g` (
 	`id_uni` varchar(10) NOT NULL,
-	`campo_151` varchar(255) NOT NULL DEFAULT '',
+	`campo_151` longtext NOT NULL,
 	PRIMARY KEY (`id_uni`),
 	CONSTRAINT `tb_g_ibfk_1` FOREIGN KEY (`id_uni`) REFERENCES `tb_unidades` (`id_uni`)   ON UPDATE CASCADE ON DELETE CASCADE
 ) ENGINE=`InnoDB` DEFAULT CHARACTER SET latin1 COLLATE latin1_swedish_ci ROW_FORMAT=COMPACT COMMENT='' CHECKSUM=0 DELAY_KEY_WRITE=0;
+
+-- ----------------------------
+--  Records of `tb_g`
+-- ----------------------------
+BEGIN;
+INSERT INTO `tb_g` VALUES ('1001', 'DERECHOS RESERVADOS GNKL/DESARROLLOS WEB ® 2009 - 2014DERECHOS RESERVADOS GNKL/DESARROLLOS WEB ® 2009 - 2014DERECHOS RESERVADOS GNKL/DESARROLLOS WEB ® 2009 - 2014DERECHOS RESERVADOS GNKL/DESARROLLOS WEB ® 2009 - 2014DERECHOS RESERVADOS GNKL/DESARROLLOS WEB ® 2009 - 2014DERECHOS RESERVADOS GNKL/DESARROLLOS WEB ® 2009 - 2014DERECHOS RESERVADOS GNKL/DESARROLLOS WEB ® 2009 - 2014DERECHOS RESERVADOS GNKL/DESARROLLOS WEB ® 2009 - 2014DERECHOS RESERVADOS GNKL/DESARROLLOS WEB ® 2009 - 2014DERECHOS RESERVADOS GNKL/DESARROLLOS WEB ® 2009 - 2014DERECHOS RESERVADOS GNKL/DESARROLLOS WEB ® 2009 - 2014');
+COMMIT;
 
 -- ----------------------------
 --  Table structure for `tb_unidades`

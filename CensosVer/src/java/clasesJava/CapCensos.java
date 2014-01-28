@@ -26,7 +26,7 @@ public class CapCensos {
             con.insertar("insert into tb_d (id_uni) values ('" + id_uni + "')");
             con.insertar("insert into tb_e (id_uni) values ('" + id_uni + "')");
             con.insertar("insert into tb_f (id_uni) values ('" + id_uni + "')");
-            con.insertar("insert into tb_g (id_uni) values ('" + id_uni + "')");
+            con.insertar("insert into tb_g (id_uni) values ('" + id_uni + "', '')");
         } catch (SQLException e) {
             try {
                 con.actualizar("update tb_a set campo_1 = '" + encuestador + "', campo_5 = '" + tipo + "', campo_4 = '" + gnombre_gnk + "', campo_18 = '" + juris + "', campo_3 = '" + fecha + " " + hora + "' where id_uni = '" + id_uni + "' ");
