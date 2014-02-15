@@ -1782,7 +1782,11 @@
                 <input type="submit" name="envio" class="btn btn-primary btn-lg btn-block" /> 
             </form-->
         </table>
+<%
+    }
 
+    con.cierraConexion();
+%>
 
 
 
@@ -1823,7 +1827,7 @@
                         <form name="form_com" method="post" id="form_com">
                             Nombre: <input type="text" class="form-control" autofocus placeholder="Ingrese su Nombre" name="txtf_nom" id="txtf_nom" />
                             Cuenta de Correo: <input type="text" class="form-control"  placeholder="Ingrese su Cuenta de Correo" name="txtf_cor" id="txtf_cor" onblur="validarEmail(this.form.txtf_cor.value);" />
-                            Deje su Comentario: <textarea name="txta_com" cols="10" rows="5" class="form-control" id="txta_com"><%=rset.getString(nombreC)%></textarea>
+                            Deje su Comentario: <textarea name="txta_com" cols="10" rows="5" class="form-control" id="txta_com"></textarea>
                             <div class="modal-footer">
 
                                 <input type="submit" class="btn btn-primary" value="Guardar" id="btn_com" onClick="return verificaCom(document.forms.form_com);" />
@@ -1839,11 +1843,7 @@
         <a href="#" class="scrollup">Scroll</a>
     </body>
 </html>
-<%
-    }
 
-    con.cierraConexion();
-%>
 <script type="text/javascript">
     $(document).ready(function() {
         $('#form').submit(function() {
@@ -1925,7 +1925,7 @@
             else {
                 var dataString = $('#form_com').serialize();
                 //alert('Datos serializados: '+dataString);
-                var dir = '/CensosVer/servletCorreo';
+                var dir = 'servletCorreo';
 
                 $.ajax({
                     url: dir,
